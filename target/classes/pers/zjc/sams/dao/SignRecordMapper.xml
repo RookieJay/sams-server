@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pers.zjc.sams.dao.SignRecordMapper" >
+  <resultMap id="BaseResultMap9" type="pers.zjc.sams.po.SignRecord" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="stu_id" property="stuId" jdbcType="VARCHAR" />
+    <result column="sign_time" property="signTime" jdbcType="TIMESTAMP" />
+    <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="location" property="location" jdbcType="VARCHAR" />
+    <result column="sign_status" property="signStatus" jdbcType="INTEGER" />
+    <result column="sign_ip" property="signIp" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="addSignRecord" parameterType="pers.zjc.sams.po.SignRecord">
+    insert into sign_record(id, stu_id, sign_time, course_id, location, sign_ip)
+    values (#{id}, #{stuId}, #{signTime}, #{courseId}, #{location}, #{signIp})
+  </insert>
+</mapper>

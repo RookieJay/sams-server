@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pers.zjc.sams.dao.ApprovalMapper" >
+  <resultMap id="ApprovalResultMap" type="pers.zjc.sams.po.Approval" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="t_id" property="tId" jdbcType="INTEGER" />
+    <result column="s_id" property="sId" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <select id="selectByTId" parameterType="Integer" resultMap="ApprovalResultMap">
+    select * from approval where t_id = #{tId};
+  </select>
+</mapper>

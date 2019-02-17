@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pers.zjc.sams.dao.ClassMapper" >
+  <resultMap id="BaseResultMap4" type="pers.zjc.sams.po.Class" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="number" property="number" jdbcType="INTEGER" />
+    <result column="grade" property="grade" jdbcType="INTEGER" />
+    <result column="instructor" property="instructor" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

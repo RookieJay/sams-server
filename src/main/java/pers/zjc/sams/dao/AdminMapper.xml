@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pers.zjc.sams.dao.AdminMapper" >
+  <resultMap id="AdminResultMap" type="pers.zjc.sams.po.Admin" >
+    <id column="admin_id" property="adminId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="selectByPrimaryKey" parameterType="int" resultMap="AdminResultMap">
+    select * from admin where admin_id = #{adminId}
+  </select>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pers.zjc.sams.dao.UserMapper" >
+  <resultMap id="UserResultMap" type="pers.zjc.sams.po.User" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="account" property="account" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="role" property="role" jdbcType="INTEGER" />
+  </resultMap>
+  <select id="getAllUsers" parameterType="pers.zjc.sams.po.User" resultMap="UserResultMap">
+    select * from user
+  </select>
+  <select id="validate" parameterType="String" resultMap="UserResultMap">
+    select * from user where account = #{account} and password = #{pwd}
+  </select>
+  <insert id="add" parameterType="pers.zjc.sams.po.User">
+    insert into user(id, account, password, role) VALUES (#{id}, #{account}, #{password}, #{role})
+  </insert>
+  <select id="selectStuByAccount" parameterType="pers.zjc.sams.po.User" resultType="pers.zjc.sams.po.User">
+  select * from user where role = 1 and account = #{account}
+  </select>
+  <select id="selectTeacByAccount" parameterType="pers.zjc.sams.po.User" resultType="pers.zjc.sams.po.User">
+    select * from user where role = 2 and account = #{account}
+  </select>
+  <select id="selectByAccount" parameterType="pers.zjc.sams.po.User" resultType="pers.zjc.sams.po.User">
+    select * from user where account = #{account}
+  </select>
+</mapper>

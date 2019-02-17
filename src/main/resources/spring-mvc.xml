@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+                        http://www.springframework.org/schema/context  
+                        http://www.springframework.org/schema/context/spring-context-4.0.xsd  
+                        http://www.springframework.org/schema/mvc  
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- 自动扫描  @Controller-->
+	<context:component-scan base-package="pers.zjc.sams.controller"/>
+
+	<!-- 开启事务注解 -->
+	<tx:annotation-driven/>
+
+	<!--避免IE执行AJAX时，返回JSON出现下载文件 -->
+	<bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="mappingJacksonHttpMessageConverter"/> <!-- JSON转换器 -->
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- 定义跳转的文件的前后缀 ，视图模式配置 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+	<!-- 文件上传配置 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 默认编码 -->
+		<property name="defaultEncoding" value="UTF-8"/>
+		<!-- 上传文件大小限制为31M，31*1024*1024 -->
+		<property name="maxUploadSize" value="32505856"/>
+		<!-- 内存中的最大值 -->
+		<property name="maxInMemorySize" value="4096"/>
+	</bean>
+	<!--自定义消息转换器的编码,解决后台传输json回前台时，中文乱码问题-->
+	<mvc:annotation-driven >
+		<mvc:message-converters register-defaults="true">
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter" >
+				<property name = "supportedMediaTypes">
+					<list>
+						<value>application/json;charset=utf-8</value>
+						<value>text/html;charset=utf-8</value>
+						<!-- application 可以在任意 form 表单里面 enctype 属性默认找到 -->
+						<value>application/x-www-form-urlencoded</value>
+					</list>
+				</property>
+			</bean>
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" >
+				<property name="supportedMediaTypes">
+					<list>
+						<value>application/json; charset=UTF-8</value>
+						<value>application/x-www-form-urlencoded; charset=UTF-8</value>
+						<value>text/plain; charset=UTF-8</value>
+					</list>
+				</property>
+				<!-- 配置 objectMapper 为我们自定义扩展后的 CustomMapper -->
+				<property name="objectMapper">
+					<bean class="pers.zjc.sams.jackson.CustomMapper">
+					</bean>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!-- 配置拦截器 -->
+	<!--<mvc:interceptors>
+		<mvc:interceptor>
+			&lt;!&ndash; 拦截所有mvc控制器 &ndash;&gt;
+			<mvc:mapping path="/**"/>
+			&lt;!&ndash; mvc:exclude-mapping是另外一种拦截，它可以在你后来的测试中对某个页面进行不拦截，这样就不用在
+				preHandler方法里面获取不拦截的请求uri地址了(优选) &ndash;&gt;
+			<mvc:exclude-mapping path="/api/mobile/login" />
+			<bean class="pers.zjc.sams.interceptor.AuthorizationInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>-->
+</beans>

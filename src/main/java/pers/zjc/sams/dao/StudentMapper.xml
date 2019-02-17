@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pers.zjc.sams.dao.StudentMapper" >
+  <resultMap id="StudentResultMap" type="pers.zjc.sams.po.Student" >
+    <id column="stu_id" property="stuId" jdbcType="INTEGER" />
+    <result column="class_id" property="classId" jdbcType="INTEGER" />
+    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="id_card" property="idCard" jdbcType="CHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="tel" property="tel" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="TINYINT" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="major" property="major" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="selectByPrimaryKey" parameterType="Integer" resultMap="StudentResultMap">
+    select * from student where stu_id = #{stuId}
+  </select>
+  <insert id="insert" parameterType="pers.zjc.sams.po.Student">
+    insert into student(stu_id, class_id, birthday, id_card, name, email, tel, sex, status, major) values
+      (#{stuId}, #{classId}, #{birthday}, #{idCard}, #{name}, #{email}, #{tel}, #{sex}, #{status}, #{major})
+  </insert>
+  <select id="selectMaxIdStu" resultType="pers.zjc.sams.po.Student">
+    select * from student where stu_id = (select MAX(stu_id) from student)
+  </select>
+  <update id="updateByPrimaryKey" parameterType="pers.zjc.sams.po.Student">
+    update student set class_id = #{}, birthday = #{birthday}, email = #{email}, id_card = #{idCard}, name = #{name},
+                       sex = #{sex}, status = #{status}, sex = #{sex} where stu_id = #{stuId}
+  </update>
+</mapper>

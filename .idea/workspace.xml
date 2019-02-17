@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="sams:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69012c2b-1dcc-4599-ae22-6783c2b0c5b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../attendance-android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/androidTest/java/com/zjc/attendance_android/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/java/com/zjc/attendance_android/LoginActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/layout/activity_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/app/src/test/java/com/zjc/attendance_android/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/generator/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/po/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/utils/CookieUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/utils/EUDataGridResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/utils/EUTreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/utils/IDUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/utils/JsonUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/utils/PageResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/utils/PathUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/pers/zjc/attend/utils/RandomUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/build/classes/url.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/config/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../attendance-server/config/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/config/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../attendance-server/config/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/src/pers/zjc/attend/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendance-server/src/pers/zjc/attend/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance-server/src/pers/zjc/attend/utils/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendance-server/src/pers/zjc/attend/utils/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/.settings/.jsdtscope" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/.settings/org.eclipse.wst.common.component" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/.settings/org.eclipse.wst.jsdt.ui.superType.container" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/.settings/org.eclipse.wst.jsdt.ui.superType.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/ant-1.9.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/ant-launcher-1.9.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/asm-5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/aspectjweaver-1.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/cglib-3.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/commons-beanutils-1.7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/commons-collections-3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/commons-dbcp2-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/commons-fileupload-1.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/commons-fileupload-1.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/commons-io-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/commons-lang3-3.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/commons-pool2-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/ezmorph-1.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/jackson-annotations-2.9.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/jackson-core-2.9.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/jackson-databind-2.9.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/javassist-3.22.0-CR2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/json-lib-1.1-jdk13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/log4j-api-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/log4j-core-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/mybatis-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/mybatis-3.4.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/mybatis-generator-core-1.3.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/mybatis-spring-1.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/mysql-connector-java-5.1.6-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/mysql-connector-java-5.1.7-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/ognl-3.1.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/pagehelper-3.4.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/pagehelper-3.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/slf4j-log4j12-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-aop-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-aspects-5.0.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-beans-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-context-support-5.0.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-core-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-jdbc-5.0.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-tx-5.0.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-web-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/lib/spring-webmvc-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/WebContent/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/generator/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/po/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/service/IUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/utils/CookieUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/utils/EUDataGridResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/utils/EUTreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/utils/IDUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/utils/JsonUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/utils/PageResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/utils/PathUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/pers/zjc/attend/utils/RandomUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/build/classes/url.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/config/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/config/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/config/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/config/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/config/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/config/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/config/url.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/generator/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/po/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/service/IUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/utils/CookieUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/utils/EUDataGridResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/utils/EUTreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/utils/IDUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/utils/JsonUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/utils/PageResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/utils/PathUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendance/src/pers/zjc/attend/utils/RandomUtils.java" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/sams$Tomcat_8_5_34.ic" NAME="Tomcat 8.5.34 Coverage Results" MODIFIED="1549879061004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="66" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="attendance@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="attendance@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="attendance@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="attendance: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="104" column="34" lean-forward="true" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="34" column="11" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="169" column="39" selection-start-line="169" selection-start-column="39" selection-end-line="169" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4073#4074#0" expanded="true" />
+                <element signature="e#4141#4142#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/StudentMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/StudentMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-61">
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mybatis</find>
+      <find>driverClasss</find>
+      <find>/java/pers/zjc/sams/map</find>
+      <find>ysql</find>
+      <find>mysql</find>
+      <find>Base</find>
+      <find>sele</find>
+      <find>pagehelper</find>
+      <find>@Ser</find>
+      <find>alias</find>
+      <find>2</find>
+      <find>BaseResultMap</find>
+      <find>service</find>
+      <find>annota</find>
+      <find>basePa</find>
+      <find>annotation-d</find>
+      <find>jdbc.pro</find>
+      <find>MappingJackson2HttpMess</find>
+      <find>SignServiceImpl</find>
+      <find>choose c</find>
+      <find>map</find>
+      <find>isEmpty</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/TimeUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/customAnnotation/TimeConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/customAnnotation/IntDef.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/TimeConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/AttenceRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/Course.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/Face.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/Leave.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/model/TokenModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/SignService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/SignRecordMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/SignRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/SignRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/SignController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/SignServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/ApprovalService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/ApprovalServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/ApprovalMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/ApprovalMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/Approval.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/ApprovalController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/AdminMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/AdminMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/AdminService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/StudentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/TeacherServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/TeacherService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/JSONUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/ClassMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/jackson/CustomMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/Base64.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/CloseUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/EncryptUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/StudentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/TeacherMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/TeacherMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/Const.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/StringUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/StudentMapper.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:/programming/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="F:\programming\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="97" />
+    <option name="y" value="61" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sams" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;mysql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550081810143" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pers.zjc.sams.utils" />
+      <recent name="pers.zjc.sams.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pers.zjc.sams.service" />
+      <recent name="pers.zjc.sams.model" />
+      <recent name="pers.zjc.sams.utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\sams\src\main\java\pers\zjc\sams\utils" />
+      <recent name="D:\workspace\sams\src\main\java\pers\zjc\sams\utils\customAnnotation" />
+      <recent name="D:\workspace\sams\src\main\java\pers\zjc\sams\generator" />
+      <recent name="D:\workspace\sams\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.34">
+    <configuration name="UUIDUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pers.zjc.sams.utils.UUIDUtils" />
+      <module name="sams" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pers.zjc.sams.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.34" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.34" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.8.0_101\jre" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="sams:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/sams" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_sams" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57684" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="sams:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UUIDUtils" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69012c2b-1dcc-4599-ae22-6783c2b0c5b5" name="Default Changelist" comment="" />
+      <created>1549350044811</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549350044811</updated>
+      <workItem from="1549350046953" duration="4315000" />
+      <workItem from="1549425465922" duration="1570000" />
+      <workItem from="1549593402989" duration="10853000" />
+      <workItem from="1549695061318" duration="10511000" />
+      <workItem from="1549717426132" duration="10998000" />
+      <workItem from="1549761550784" duration="59544000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="97791000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49840257" visible="true" weight="0.22239032" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.50159746" side_tool="true" weight="0.27836612" />
+      <window_info anchor="bottom" id="Duplicate detector" weight="0.3295082" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.3295082" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7004539" weight="0.2442623" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.49924356" weight="0.3295082" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.29954615" side_tool="true" weight="0.78032786" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49924356" weight="0.32786885" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Java Enterprise" order="15" weight="0.3295082" />
+      <window_info anchor="bottom" id="Version Control" order="16" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.14447807" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="JSF" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32980332" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="CDI" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+      <window_info anchor="right" id="Ant Build" order="12" side_tool="true" weight="0.24962178" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49840257" visible="true" weight="0.27836612" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.50159746" side_tool="true" weight="0.27836612" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.3295082" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7004539" visible="true" weight="0.48688525" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.49924356" weight="0.3295082" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.29954615" side_tool="true" weight="0.78032786" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49924356" weight="0.32786885" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Java Enterprise" order="15" weight="0.3295082" />
+      <window_info anchor="bottom" id="Version Control" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="JSF" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32980332" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="CDI" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/SignController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-118">
+          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/SignServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/ApprovalService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/ApprovalMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/ApprovalServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/ApprovalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/Approval.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/TimeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3183#3184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/SignRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/ApprovalMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/TeacherService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/AdminMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/TeacherServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+          <folding>
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1083#1084#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/ClassMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="71" column="27" lean-forward="true" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/JSONUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1290#1291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.8.0/jackson-databind-2.8.0.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/jackson/CustomMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1181#1432#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/customAnnotation/Authorization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/interceptor/AuthorizationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/RedisTokenManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/EncryptUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1314">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/CloseUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/TokenModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/Base64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/TokenManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="151" column="25" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
+          <folding>
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#3579#3580#0" expanded="true" />
+            <element signature="e#3615#3616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/po/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://012ae78d-5217-414a-8064-2de694fc4ec4/schema/attendance/table/teacher">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://012ae78d-5217-414a-8064-2de694fc4ec4/schema/attendance/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://012ae78d-5217-414a-8064-2de694fc4ec4/schema/attendance/table/student">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/TeacherMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/TeacherMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/AdminMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/utils/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="105" column="19" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="104" column="34" lean-forward="true" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="34" column="11" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="169" column="39" selection-start-line="169" selection-start-column="39" selection-end-line="169" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4073#4074#0" expanded="true" />
+            <element signature="e#4141#4142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/StudentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pers/zjc/sams/dao/StudentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>sams:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>sams</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
