@@ -51,4 +51,10 @@ public interface Const {
 
         int DEFAULT_TEAC_ID = 20010001;
     }
+
+    interface INTERVAL {
+        int TODAY = 1;
+        int WEEK = 2;
+        int MONTH = 3;
+    }
 }

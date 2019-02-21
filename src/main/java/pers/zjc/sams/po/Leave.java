@@ -6,7 +6,7 @@ import pers.zjc.sams.utils.TimeUtils;
 import java.util.Date;
 
 public class Leave {
-    private Integer id;
+    private String id;
 
     private Integer stuId;
 
@@ -18,11 +18,13 @@ public class Leave {
 
     private Integer courseId;
 
-    public Integer getId() {
+    private Integer status;
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -64,5 +66,13 @@ public class Leave {
 
     public void setCourseId(Integer courseId) {
         this.courseId = courseId;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

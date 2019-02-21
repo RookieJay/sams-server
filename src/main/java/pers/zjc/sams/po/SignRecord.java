@@ -36,9 +36,13 @@ public class SignRecord {
         this.stuId = stuId;
     }
 
-    public String getSignTime() {
-        return TimeUtils.date2String(signTime, Const.DateFormat.WITH_HMS);
+    public Date getSignTime() {
+        return signTime;
     }
+
+//    public String getSignTimeStr() {
+//        return TimeUtils.date2String(signTime, Const.DateFormat.WITH_HMS);
+//    }
 
     public void setSignTime(Date signTime) {
         this.signTime = signTime;

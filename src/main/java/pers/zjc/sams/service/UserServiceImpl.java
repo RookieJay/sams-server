@@ -169,4 +169,24 @@ public class UserServiceImpl implements UserService {
     public boolean modifyStudent(Student student) {
         return studentMapper.updateByPrimaryKey(student) > 0;
     }
+
+    @Override
+    public boolean modifyTeacher(Teacher teacher) {
+        return teacherMapper.updateByPrimaryKey(teacher) > 0;
+    }
+
+    @Override
+    public Student getStudent(Student student) {
+        return studentMapper.selectByPrimaryKey(student.getStuId());
+    }
+
+    @Override
+    public Teacher getTeacher(Teacher teacher) {
+        return teacherMapper.selectByPrimaryKey(teacher.getId());
+    }
+
+    @Override
+    public boolean isAccountExisted(User user) {
+        return userMapper.selectByAccount(user) != null;
+    }
 }

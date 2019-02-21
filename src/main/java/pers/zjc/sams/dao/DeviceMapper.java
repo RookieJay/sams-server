@@ -3,6 +3,7 @@ package pers.zjc.sams.dao;
 import pers.zjc.sams.po.Device;
 
 public interface DeviceMapper {
+
     int deleteByPrimaryKey(String deviceId);
 
     int insert(Device record);

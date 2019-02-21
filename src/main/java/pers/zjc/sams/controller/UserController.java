@@ -15,7 +15,9 @@ import pers.zjc.sams.utils.Logger;
 import pers.zjc.sams.utils.Result;
 import pers.zjc.sams.utils.StringUtils;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -32,7 +34,8 @@ public class UserController extends BaseController{
     public Result getUsers() {
         List<User> userList = userService.getAllUsers();
         if (userList != null && userList.size() > 0) {
-            Logger.getLogger(TAG).info("查询用户列表成功");
+            Map map = new LinkedHashMap<>();
+            map.put("users", userList);
             return Result.build(Const.HttpStatusCode.HttpStatus_200, "查询用户列表成功",userList);
         }
         return Result.fail_500();
@@ -94,18 +97,74 @@ public class UserController extends BaseController{
     }
 
     /**
+     * 学生信息查询
+     * */
+    @ResponseBody
+    @RequestMapping(value = "/students/info", method = RequestMethod.POST)
+    public Result getStudent(@RequestBody Student student) {
+        if (StringUtils.isEmpty(String.valueOf(student.getStuId()))) {
+            return Result.build(Const.HttpStatusCode.HttpStatus_401, "学号不能为空");
+        }
+        Student stu = userService.getStudent(student);
+        if (stu != null) {
+            return Result.build(Const.HttpStatusCode.HttpStatus_200, "学生信息查询成功", stu);
+        } else {
+            return Result.build(Const.HttpStatusCode.HttpStatus_500, "学生信息查询失败");
+        }
+    }
+
+    /**
+     * 教师信息查询
+     * */
+    @ResponseBody
+    @RequestMapping(value = "/teachers/info", method = RequestMethod.POST)
+    public Result getStudent(@RequestBody Teacher teacher) {
+        if (StringUtils.isEmpty(String.valueOf(teacher.getId()))) {
+            return Result.build(Const.HttpStatusCode.HttpStatus_401, "教师编号不能为空");
+        }
+        Teacher teac = userService.getTeacher(teacher);
+        if (teac != null) {
+            return Result.build(Const.HttpStatusCode.HttpStatus_200, "教师信息查询成功", teac);
+        } else {
+            return Result.build(Const.HttpStatusCode.HttpStatus_500, "教师信息查询失败");
+        }
+    }
+
+    /**
      * 学生信息修改
      * */
     @ResponseBody
     @RequestMapping(value = "/students/info/modify", method = RequestMethod.POST)
-    public Result addStudent(Student student) {
+    public Result modifyStudent(@RequestBody Student student) {
         if (StringUtils.isEmpty(String.valueOf(student.getStuId()))) {
             return Result.build(Const.HttpStatusCode.HttpStatus_401, "学号不能为空");
         }
         if (userService.modifyStudent(student)) {
-            return Result.build(Const.HttpStatusCode.HttpStatus_200, "学生"+student.getName()+"添加成功");
+            Student stu = userService.getStudent(student);
+            Logger.getLogger(this.getClass().getName()).info(stu.getName());
+            return Result.build(Const.HttpStatusCode.HttpStatus_200, "学生"+stu.getName()+"信息修改成功", stu);
         } else {
-            return Result.build(Const.HttpStatusCode.HttpStatus_500, "学生"+student.getName()+"添加失败");
+            return Result.build(Const.HttpStatusCode.HttpStatus_500, "学生信息修改失败");
         }
     }
+
+    /**
+     * 教师信息修改
+     * */
+    @ResponseBody
+    @RequestMapping(value = "/teachers/info/modify")
+    public Result modifyTeacher(@RequestBody Teacher teacher) {
+        if (StringUtils.isEmpty(String.valueOf(teacher.getId()))) {
+            return Result.build(Const.HttpStatusCode.HttpStatus_401, "教师编号不能为空");
+        }
+        if (userService.modifyTeacher(teacher)) {
+            Teacher teac = userService.getTeacher(teacher);
+            Logger.getLogger(this.getClass().getName()).info(teac.getName());
+            return Result.build(Const.HttpStatusCode.HttpStatus_200, "教师"+teac.getName()+"信息修改成功", teac);
+        } else {
+            return Result.build(Const.HttpStatusCode.HttpStatus_500, "教师信息修改失败");
+        }
+    }
+
+
 }

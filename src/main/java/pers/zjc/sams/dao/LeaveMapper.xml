@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="pers.zjc.sams.dao.LeaveMapper" >
-  <resultMap id="BaseResultMap8" type="pers.zjc.sams.po.Leave" >
-    <id column="id" property="id" jdbcType="INTEGER" />
+  <resultMap id="LeaveResultMap" type="pers.zjc.sams.po.Leave" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="stu_id" property="stuId" jdbcType="INTEGER" />
     <result column="reason" property="reason" jdbcType="VARCHAR" />
     <result column="begin_time" property="beginTime" jdbcType="TIMESTAMP" />
     <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
     <result column="course_id" property="courseId" jdbcType="INTEGER" />
   </resultMap>
+    <insert id="insert" parameterType="pers.zjc.sams.po.Leave">
+        insert into `leave`(id, stu_id, reason, begin_time, end_time, course_id) VALUES (#{id}, #{stuId}, #{reason}, #{beginTime}, #{endTime}, #{courseId})
+    </insert>
+    <select id="selectLeavesByStuId" parameterType="Integer" resultMap="LeaveResultMap">
+        select * from `leave`
+          <where>
+              <if test="stuId != null">
+                  stu_id = #{stuId}
+              </if>
+          </where>
+    </select>
+    <select id="selectAll" resultMap="LeaveResultMap">
+        select * from `leave`
+    </select>
+    <update id="revoke" parameterType="String">
+        update `leave`
+          <set>
+              <if test="id != null and id != ''">
+                  status = 1
+              </if>
+          </set>
+          <where>
+              <if test="id != null and id != ''">
+                  id = #{id}
+              </if>
+          </where>
+    </update>
 </mapper>

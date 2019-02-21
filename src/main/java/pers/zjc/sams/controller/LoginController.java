@@ -15,6 +15,8 @@ import pers.zjc.sams.service.StudentService;
 import pers.zjc.sams.service.TeacherService;
 import pers.zjc.sams.service.UserService;
 import pers.zjc.sams.utils.*;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -40,10 +42,13 @@ public class LoginController {
         Logger.getLogger("pwd").info(user.getPassword());
         try {
             if (StringUtils.isEmpty(user.getAccount())) {
-                return new Result(Const.HttpStatusCode.HttpStatus_401, "账号不能为空", new Object());
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号不能为空");
             }
             if (StringUtils.isEmpty(user.getPassword())) {
-                return new Result(Const.HttpStatusCode.HttpStatus_401, "密码不能为空", new Object());
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "密码不能为空");
+            }
+            if (!userService.isAccountExisted(user)) {
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号不存在");
             }
             User localUser = userService.validate(user.getAccount(), user.getPassword());
             Map map = new LinkedHashMap<>();
@@ -77,7 +82,7 @@ public class LoginController {
                         break;
                 }
             } else {
-                return new Result(Const.HttpStatusCode.HttpStatus_401, "账号或密码错误", new Object());
+                return new Result(Const.HttpStatusCode.HttpStatus_401, "密码错误", new Object());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -85,7 +90,7 @@ public class LoginController {
                 return new Result(Const.HttpStatusCode.HttpStatus_500, e.getMessage(), new Object());
             }
         }
-        return new Result(Const.HttpStatusCode.HttpStatus_401, "不存在该账号对应的角色信息，请联系管理员！", new Object());
+        return new Result(Const.HttpStatusCode.HttpStatus_401, "未知错误，请联系管理员！", new Object());
     }
 
 }

@@ -18,12 +18,15 @@ public class ApprovalController {
     @Autowired
     private ApprovalService approvalService;
 
+    /***
+     * 审批
+     */
     @RequestMapping(value = "check")
     @ResponseBody
     public Result check(@RequestBody Approval approval) {
         String id = UUIDUtils.getUUID();
         approval.setId(id);
-        approval.settId(412541);
+        approval.settId(20010001);
         approval.setStatus(0);
         if (approvalService.approval(approval)) {
             return Result.build(Const.HttpStatusCode.HttpStatus_200, "审批成功", approval);

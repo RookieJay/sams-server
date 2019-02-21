@@ -12,5 +12,11 @@ public interface SignService {
 
     List<SignRecord> getStuSignRecords(int id);
 
+    boolean isSigned(SignRecord signRecord);
 
+    List<SignRecord> getCourseSignRecords(SignRecord record);
+
+    List<SignRecord> getCourseSignRecordsWeek(SignRecord record);
+
+    List<SignRecord> getCourseSignRecordsMonth(SignRecord record);
 }

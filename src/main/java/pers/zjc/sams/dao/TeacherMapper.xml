@@ -19,4 +19,32 @@
   <select id="selectMaxIdTeac" resultType="pers.zjc.sams.po.Teacher">
     select * from teacher where id = (select max(id) from teacher)
   </select>
+  <update id="updateByPrimaryKey" parameterType="pers.zjc.sams.po.Teacher">
+    update teacher
+      <set>
+        <if test="id != null">
+          id = #{id},
+        </if>
+        <if test="major != null and major != ''">
+          major = #{major},
+        </if>
+        <if test="name != null and name != ''">
+          name = #{name},
+        </if>
+        <if test="email != null and email != ''">
+          email = #{email},
+        </if>
+        <if test="tel != null and tel != ''">
+          tel = #{tel},
+        </if>
+        <if test="sex != null and major != ''">
+          sex = #{sex}
+        </if>
+      </set>
+      <where>
+        <if test="id != null">
+          id = #{id}
+        </if>
+      </where>
+  </update>
 </mapper>

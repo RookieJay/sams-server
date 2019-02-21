@@ -33,4 +33,12 @@ public interface UserService {
     boolean isExisted(User user);
 
     boolean modifyStudent(Student student);
+
+    boolean modifyTeacher(Teacher teacher);
+
+    Student getStudent(Student student);
+
+    Teacher getTeacher(Teacher teacher);
+
+    boolean isAccountExisted(User user);
 }
