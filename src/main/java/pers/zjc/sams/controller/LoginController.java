@@ -35,6 +35,10 @@ public class LoginController {
     @Autowired
     private TeacherService teacherService;
 
+    /**
+     *
+     * 登录
+     */
     @ResponseBody
     @RequestMapping(value = "", method = RequestMethod.POST)
     public Result login(@RequestBody User user) {

@@ -29,6 +29,10 @@ public class UserController extends BaseController{
     @Autowired
     private UserService userService;
 
+    /**
+     *
+     * 查询所有用户
+     */
     @ResponseBody
     @RequestMapping(value = "", method = RequestMethod.POST)
     public Result getUsers() {
@@ -41,6 +45,10 @@ public class UserController extends BaseController{
         return Result.fail_500();
     }
 
+    /**
+     *
+     * 注册
+     */
     @ResponseBody
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public Result register(@RequestBody User user) {

@@ -60,16 +60,16 @@ public class AttenceRecord {
         this.operator = operator == null ? null : operator.trim();
     }
 
-    public String getCreateTime() {
-        return TimeUtils.date2String(createTime, Const.DateFormat.WITH_HMS);
+    public Date getCreateTime() {
+        return createTime;
     }
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    public String getUpdateTime() {
-        return TimeUtils.date2String(updateTime, Const.DateFormat.WITH_HMS);
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
     public void setUpdateTime(Date updateTime) {

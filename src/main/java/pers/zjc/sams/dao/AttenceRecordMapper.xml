@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="pers.zjc.sams.dao.AttenceRecordMapper" >
-  <resultMap id="BaseResultMap3" type="pers.zjc.sams.po.AttenceRecord" >
+  <resultMap id="AttenceResultMap" type="pers.zjc.sams.po.AttenceRecord" >
     <id column="attence_id" property="attenceId" jdbcType="INTEGER" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="stu_id" property="stuId" jdbcType="INTEGER" />
@@ -10,4 +10,55 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
+  <select id="selecBySingleCondition" parameterType="pers.zjc.sams.po.AttenceRecord" resultMap="AttenceResultMap">
+    select * from attence_record
+    <where>
+      <choose>
+        <when test="attenceId != '' and attenceId != null">
+          attence_id = #{attenceId}
+        </when>
+        <when test="status != null">
+          and status = #{status}
+        </when>
+        <when test="stuId != '' and stuId != null">
+          and stu_id = #{stuId}
+        </when>
+        <otherwise>
+          and course_id = #{courseId}
+        </otherwise>
+      </choose>
+      <if test="createTime != null and updateTime != null">
+        and create_time between #{createTime} and #{updateTime}
+      </if>
+    </where>
+  </select>
+  <!--自定义时间查询
+      此处createTime暂时用于代替开始时间，updateTime代替查询结束时间-->
+  <select id="commonSelectCustom" parameterType="pers.zjc.sams.po.AttenceRecord" resultMap="AttenceResultMap">
+    select * from attence_record
+    <where>
+      <if test="stuId != null">
+        stu_id=#{stuId}
+      </if>
+      <if test="courseId != null">
+        and course_id = #{courseId}
+      </if>
+      <if test="createTime != null and updateTime != null">
+        and create_time between #{createTime} and #{updateTime}
+      </if>
+    </where>
+  </select>
+  <update id="updateByPrimaryKey" parameterType="pers.zjc.sams.po.AttenceRecord">
+    update attence_record
+    <set>
+      <if test="status != null">
+        and status = #{status}
+      </if>
+    </set>
+    <where>
+      <if test="attenceId != null">
+        attence_id = #{attenceId}
+      </if>
+    </where>
+  </update>
 </mapper>
