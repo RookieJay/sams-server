@@ -29,4 +29,6 @@ public interface SignRecordMapper {
     List<SignRecord> commonSelectWeek(SignRecord record);
 
     List<SignRecord> commonSelectMonth(SignRecord record);
+
+    List<SignRecord> isSigned(SignRecord signRecord);
 }

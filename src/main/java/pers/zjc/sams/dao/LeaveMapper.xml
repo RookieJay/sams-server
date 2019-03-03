@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="pers.zjc.sams.dao.LeaveMapper" >
-  <resultMap id="LeaveResultMap" type="pers.zjc.sams.po.Leave" >
+  <resultMap id="LeaveResultMap" type="pers.zjc.sams.vo.LeaveVo" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="stu_id" property="stuId" jdbcType="INTEGER" />
     <result column="reason" property="reason" jdbcType="VARCHAR" />
     <result column="begin_time" property="beginTime" jdbcType="TIMESTAMP" />
     <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
     <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="name" property="courseName" jdbcType="VARCHAR" />
+    <result column="s_name" property="stuName" jdbcType="VARCHAR"/>
   </resultMap>
     <insert id="insert" parameterType="pers.zjc.sams.po.Leave">
         insert into `leave`(id, stu_id, reason, begin_time, end_time, course_id) VALUES (#{id}, #{stuId}, #{reason}, #{beginTime}, #{endTime}, #{courseId})
@@ -36,4 +38,19 @@
               </if>
           </where>
     </update>
+    <select id="commonSelect" resultMap="LeaveResultMap">
+        select a.*, b.name AS "courseName", c.s_name as "stuName" from `leave` a, course b, student c
+        <where>
+            a.course_id = b.id  and a.stu_id = c.stu_id and
+            <if test="stuId != null">
+                a.stu_id=#{stuId}
+            </if>
+            <if test="courseId != null">
+                and a.course_id = #{courseId}
+            </if>
+            <if test="beginTime != null and endTime != null">
+                and a.begin_time between #{beginTime} and #{endTime}
+            </if>
+        </where>
+    </select>
 </mapper>

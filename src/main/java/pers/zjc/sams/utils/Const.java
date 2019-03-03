@@ -13,23 +13,23 @@ public interface Const {
         /**
          * 成功
          */
-        int HttpStatus_200 = 200;
+        String HttpStatus_200 = "200";
         /**
          * 未通过身份认证
          */
-        int HttpStatus_401 = 401;
+        String HttpStatus_401 = "401";
         /**
          * 没有访问对应资源的权限
          */
-        int HttpStatus_403 = 403;
+        String HttpStatus_403 = "403";
         /**
          * 未找到资源
          */
-        int HttpStatus_404 = 404;
+        String HttpStatus_404 = "404";
         /**
          * 服务端错误
          */
-        int HttpStatus_500 = 500;
+        String HttpStatus_500 = "500";
     }
 
     interface DateFormat {

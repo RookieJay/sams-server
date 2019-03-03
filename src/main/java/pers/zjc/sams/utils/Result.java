@@ -4,7 +4,10 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import pers.zjc.sams.jackson.CustomMapper;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 自定义返回数据结构类
@@ -15,7 +18,7 @@ public class Result {
     private static final CustomMapper MAPPER = new CustomMapper();
 
     // 响应业务状态
-    private Integer code;
+    private String code;
 
     // 响应消息
     private String msg;
@@ -23,7 +26,7 @@ public class Result {
     // 响应中的数据
     private Object data;
 
-    public static Result build(Integer code, String msg, Object data) {
+    public static Result build(String code, String msg, Object data) {
         return new Result(code, msg, data);
     }
 
@@ -39,18 +42,18 @@ public class Result {
 
     }
 
-    public static Result build(Integer code, String msg) {
+    public static Result build(String code, String msg) {
         return new Result(code, msg, null);
     }
 
-    public Result(Integer code, String msg, Object data) {
+    public Result(String code, String msg, Object data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
     }
 
     public Result(Object data) {
-        this.code = 200;
+        this.code = Const.HttpStatusCode.HttpStatus_200;
         this.msg = "OK";
         this.data = data;
     }
@@ -59,11 +62,11 @@ public class Result {
 //        return this.status == 200;
 //    }
 
-    public Integer getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -105,7 +108,7 @@ public class Result {
                     obj = MAPPER.readValue(data.asText(), clazz);
                 }
             }
-            return build(jsonNode.get("status").intValue(), jsonNode.get("msg").asText(), obj);
+            return build(jsonNode.get("status").toString(), jsonNode.get("msg").asText(), obj);
         } catch (Exception e) {
             return null;
         }
@@ -143,7 +146,7 @@ public class Result {
                 obj = MAPPER.readValue(data.traverse(),
                         MAPPER.getTypeFactory().constructCollectionType(List.class, clazz));
             }
-            return build(jsonNode.get("code").intValue(), jsonNode.get("msg").asText(), obj);
+            return build(jsonNode.get("code").toString(), jsonNode.get("msg").asText(), obj);
         } catch (Exception e) {
             return null;
         }
@@ -151,5 +154,17 @@ public class Result {
 
     public static Result fail_500() {
         return build(Const.HttpStatusCode.HttpStatus_500, "服务端未知错误");
+    }
+
+    public static Result fail_obj_500(String key) {
+        Map map = new HashMap();
+        map.put(key, new Object());
+        return build(Const.HttpStatusCode.HttpStatus_500, "服务端未知错误", map);
+    }
+
+    public static Result fail_array_500(String key) {
+        Map map = new HashMap();
+        map.put(key, new ArrayList<>());
+        return build(Const.HttpStatusCode.HttpStatus_500, "服务端未知错误", map);
     }
 }

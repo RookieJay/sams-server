@@ -51,6 +51,7 @@ public class SignServiceImpl implements SignService {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
         return false;
     }
@@ -99,5 +100,10 @@ public class SignServiceImpl implements SignService {
             return null;
         }
         return null;
+    }
+
+    @Override
+    public List<SignRecord> getSignRecordsToday(SignRecord record) {
+        return signMapper.commonSelectToday(record);
     }
 }

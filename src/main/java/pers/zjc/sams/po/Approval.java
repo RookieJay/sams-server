@@ -1,5 +1,6 @@
 package pers.zjc.sams.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import pers.zjc.sams.utils.Const;
 import pers.zjc.sams.utils.TimeUtils;
 
@@ -16,7 +17,6 @@ public class Approval {
     private Integer signId;
 
     private Integer status;
-
     private Date time;
 
     public String getId() {
@@ -51,8 +51,8 @@ public class Approval {
         this.status = status;
     }
 
-    public String getTime() {
-        return TimeUtils.date2String(time, Const.DateFormat.WITH_HMS);
+    public Date getTime() {
+        return time;
     }
 
     public void setTime(Date time) {

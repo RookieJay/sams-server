@@ -1,12 +1,14 @@
 package pers.zjc.sams.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import pers.zjc.sams.po.enums.CourseEnum;
 import pers.zjc.sams.utils.Const;
 import pers.zjc.sams.utils.TimeUtils;
 
 import java.util.Date;
 
 public class AttenceRecord {
-    private Integer attenceId;
+    private String attenceId;
 
     private Integer status;
 
@@ -14,17 +16,19 @@ public class AttenceRecord {
 
     private Integer courseId;
 
+    private String courseName;
+
     private String operator;
 
     private Date createTime;
 
     private Date updateTime;
 
-    public Integer getAttenceId() {
+    public String getAttenceId() {
         return attenceId;
     }
 
-    public void setAttenceId(Integer attenceId) {
+    public void setAttenceId(String attenceId) {
         this.attenceId = attenceId;
     }
 
@@ -50,6 +54,15 @@ public class AttenceRecord {
 
     public void setCourseId(Integer courseId) {
         this.courseId = courseId;
+    }
+
+    public String getCourseName() {
+//        courseName = CourseEnum.parse(courseId).toString();
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
     public String getOperator() {

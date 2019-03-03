@@ -31,6 +31,6 @@ public class ApprovalController {
         if (approvalService.approval(approval)) {
             return Result.build(Const.HttpStatusCode.HttpStatus_200, "审批成功", approval);
         }
-        return Result.build(Const.HttpStatusCode.HttpStatus_500, "服务端未知错误");
+        return Result.build(Const.HttpStatusCode.HttpStatus_500, "服务端未知错误", new Object());
     }
 }

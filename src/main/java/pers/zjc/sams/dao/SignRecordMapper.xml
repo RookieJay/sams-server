@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="pers.zjc.sams.dao.SignRecordMapper" >
-  <resultMap id="signResultMap" type="pers.zjc.sams.po.SignRecord" >
+  <resultMap id="signResultMap" type="pers.zjc.sams.vo.SignRecordVo" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="stu_id" property="stuId" jdbcType="VARCHAR" />
     <result column="sign_time" property="signTime" jdbcType="TIMESTAMP" />
@@ -9,6 +9,8 @@
     <result column="location" property="location" jdbcType="VARCHAR" />
     <result column="sign_status" property="signStatus" jdbcType="INTEGER" />
     <result column="sign_ip" property="signIp" jdbcType="VARCHAR" />
+    <result column="name" property="courseName" jdbcType="VARCHAR" />
+    <result column="s_name" property="stuName" jdbcType="VARCHAR"/>
   </resultMap>
 
   <insert id="addSignRecord" parameterType="pers.zjc.sams.po.SignRecord">
@@ -25,51 +27,44 @@
   </select>
 
   <select id="commonSelectToday" parameterType="pers.zjc.sams.po.SignRecord" resultMap="signResultMap">
-    select * from sign_record
+    select a.*, b.name , c.s_name  from sign_record a, course b, student c
     <where>
+      a.course_id = b.id  and a.stu_id = c.stu_id and
       <if test="stuId != null">
-        stu_id=#{stuId}
+        c.stu_id=#{stuId}
       </if>
       <if test="courseId != null">
-        and course_id=#{courseId}
+        and a.course_id = #{courseId}
       </if>
-      <if test="signStatus !='' and signStatus != null">
-        and sign_status=#{signStatus}
-      </if>
-      and to_days(sign_time) = to_days(now())
+        and to_days(a.sign_time) = to_days(now())
     </where>
   </select>
 
   <select id="commonSelectWeek" parameterType="pers.zjc.sams.po.SignRecord" resultMap="signResultMap">
-    select * from sign_record
+    select a.*, b.name , c.s_name  from sign_record a, course b, student c
     <where>
+      a.course_id = b.id  and a.stu_id = c.stu_id and
       <if test="stuId != null">
-        stu_id=#{stuId}
+        c.stu_id=#{stuId}
       </if>
       <if test="courseId != null">
-        and course_id=#{courseId}
+        and a.course_id = #{courseId}
       </if>
-      <if test="signStatus !='' and signStatus != null">
-        and sign_status=#{signStatus}
-      </if>
-        and DATE_SUB(CURDATE(), INTERVAL 7 DAY) <![CDATA[<=]]> date(sign_time)
+        and DATE_SUB(CURDATE(), INTERVAL 7 DAY) <![CDATA[<=]]> date(a.sign_time)
     </where>
   </select>
 
   <select id="commonSelectMonth" parameterType="pers.zjc.sams.po.SignRecord" resultMap="signResultMap">
-    select * from sign_record
+    select a.*, b.name , c.s_name  from sign_record a, course b, student c
     <where>
+      a.course_id = b.id  and a.stu_id = c.stu_id and
       <if test="stuId != null">
-        stu_id=#{stuId}
+        a.stu_id=#{stuId}
       </if>
       <if test="courseId != null">
-        and course_id=#{courseId}
+        and a.course_id = #{courseId}
       </if>
-      <if test="signStatus !='' and signStatus != null">
-        and sign_status=#{signStatus}
-      </if>
-      and DATE_SUB(CURDATE(), INTERVAL 30 DAY) <![CDATA[<=]]> date(sign_time)
+        and DATE_SUB(CURDATE(), INTERVAL 30 DAY) <![CDATA[<=]]> date(a.sign_time)
     </where>
   </select>
-
 </mapper>

@@ -53,15 +53,15 @@ public class UserController extends BaseController{
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public Result register(@RequestBody User user) {
         if (user == null || StringUtils.isEmpty(user.getAccount()) || StringUtils.isEmpty(user.getPassword())) {
-            return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号或密码不能为空");
+            return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号或密码不能为空", new Object());
         }
         try {
             //管理员
             if (user.getRole() == 0) {
-                return Result.build(Const.HttpStatusCode.HttpStatus_401, "您没有权限注册管理员账号");
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "您没有权限注册管理员账号", new Object());
             }
             if (userService.isExisted(user)) {
-                return Result.build(Const.HttpStatusCode.HttpStatus_401, "该账号已被注册");
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "该账号已被注册", new Object());
             }
             switch (user.getRole()) {
                 //学生
@@ -117,7 +117,7 @@ public class UserController extends BaseController{
         if (stu != null) {
             return Result.build(Const.HttpStatusCode.HttpStatus_200, "学生信息查询成功", stu);
         } else {
-            return Result.build(Const.HttpStatusCode.HttpStatus_500, "学生信息查询失败");
+            return Result.build(Const.HttpStatusCode.HttpStatus_500, "学生信息查询失败", new Object());
         }
     }
 
@@ -134,7 +134,7 @@ public class UserController extends BaseController{
         if (teac != null) {
             return Result.build(Const.HttpStatusCode.HttpStatus_200, "教师信息查询成功", teac);
         } else {
-            return Result.build(Const.HttpStatusCode.HttpStatus_500, "教师信息查询失败");
+            return Result.build(Const.HttpStatusCode.HttpStatus_500, "教师信息查询失败", new Object());
         }
     }
 

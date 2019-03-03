@@ -44,16 +44,16 @@ public class Leave {
         this.reason = reason == null ? null : reason.trim();
     }
 
-    public String getBeginTime() {
-        return TimeUtils.date2String(beginTime, Const.DateFormat.WITH_HMS);
+    public Date getBeginTime() {
+        return beginTime;
     }
 
     public void setBeginTime(Date beginTime) {
         this.beginTime = beginTime;
     }
 
-    public String getEndTime() {
-        return TimeUtils.date2String(endTime, Const.DateFormat.WITH_HMS);
+    public Date getEndTime() {
+        return endTime;
     }
 
     public void setEndTime(Date endTime) {

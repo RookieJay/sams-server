@@ -2,6 +2,7 @@ package pers.zjc.sams.dao;
 
 import org.apache.ibatis.annotations.Param;
 import pers.zjc.sams.po.Leave;
+import pers.zjc.sams.vo.LeaveVo;
 
 import java.util.List;
 
@@ -19,9 +20,11 @@ public interface LeaveMapper {
 
     int updateByPrimaryKey(Leave record);
 
-    List<Leave> selectLeavesByStuId(@Param("stuId") int stuId);
+    List<LeaveVo> selectLeavesByStuId(@Param("stuId") int stuId);
 
-    List<Leave> selectAll();
+    List<LeaveVo> selectAll();
 
     int revoke(String id);
+
+    List<LeaveVo> commonSelect(Leave record);
 }
