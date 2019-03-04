@@ -41,4 +41,8 @@ public interface UserService {
     Teacher getTeacher(Teacher teacher);
 
     boolean isAccountExisted(User user);
+
+    boolean isPwdCorrect(User user);
+
+    boolean modifyPwd(User user);
 }

@@ -174,5 +174,31 @@ public class UserController extends BaseController{
         }
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/modify/pwd")
+    public Result modifyPwd(@RequestBody User user) {
+        try {
+            if (StringUtils.isEmpty(String.valueOf(user.getId()))) {
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "用户id不能为空");
+            }
+            if (StringUtils.isEmpty(user.getAccount())) {
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "旧密码不能为空");
+            }
+            if (StringUtils.isEmpty(user.getPassword())) {
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "新密码不能为空");
+            }
+            if (!userService.isPwdCorrect(user)) {
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "旧密码不正确，请重新输入");
+            }
+            if (userService.modifyPwd(user)) {
+                return Result.ok();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_500();
+        }
+        return Result.fail_500();
+    }
+
 
 }

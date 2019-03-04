@@ -16,7 +16,6 @@ import pers.zjc.sams.service.AttenceService;
 import pers.zjc.sams.service.SignService;
 import pers.zjc.sams.service.StudentService;
 import pers.zjc.sams.utils.*;
-import sun.rmi.runtime.Log;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
@@ -42,8 +41,6 @@ public class SignController {
         signRecord.setId(signId);
         signRecord.setSignTime(new Date());
         Logger.getLogger(SignController.class).info(signRecord.toString());
-//        Map<String, String> map = new LinkedHashMap<>();
-//        map.put("signId", signId);
         try {
             if (StringUtils.isEmpty(signRecord.getSignIp())) {
                 signRecord.setSignIp(IPUtils.getRealIp(request));

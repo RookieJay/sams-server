@@ -5,6 +5,8 @@
     <meta charset="utf-8">
 </head>
 <body>
-<h2>学生课堂考勤管理系统</h2>
+<div style="text-align: center;">
+<h2>Welcome to SAMS</h2>
+</div>
 </body>
 </html>

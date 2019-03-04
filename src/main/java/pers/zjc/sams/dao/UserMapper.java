@@ -19,4 +19,8 @@ public interface UserMapper {
     User selectTeacByAccount(User user);
 
     User selectByAccount(User user);
+
+    int updatePwd(User user);
+
+    User selectById(User user);
 }

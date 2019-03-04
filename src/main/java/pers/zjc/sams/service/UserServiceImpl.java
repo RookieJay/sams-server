@@ -9,6 +9,7 @@ import pers.zjc.sams.dao.UserMapper;
 import pers.zjc.sams.po.Student;
 import pers.zjc.sams.po.Teacher;
 import pers.zjc.sams.po.User;
+import pers.zjc.sams.utils.StringUtils;
 
 import java.util.List;
 
@@ -188,5 +189,32 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean isAccountExisted(User user) {
         return userMapper.selectByAccount(user) != null;
+    }
+
+    @Override
+    public boolean isPwdCorrect(User user) {
+        try {
+            User exUser = userMapper.selectById(user);
+            if (StringUtils.equals(user.getAccount(), exUser.getPassword())) {
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean modifyPwd(User user) {
+        try {
+            if (userMapper.updatePwd(user) > 0) {
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return false;
     }
 }
