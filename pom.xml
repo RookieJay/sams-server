@@ -225,8 +225,16 @@
             <groupId>com.scienjus</groupId>
             <artifactId>spring-restful-authorization</artifactId>
         </dependency>-->
+        <!--JWT-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.0</version>
+        </dependency>
 
     </dependencies>
+
+
 
     <build>
         <finalName>web-ssm</finalName>
