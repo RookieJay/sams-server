@@ -38,6 +38,10 @@ public class Result {
         return new Result(null);
     }
 
+    public static Result ok(String msg) {
+        return new Result(Const.HttpStatusCode.HttpStatus_200, msg, new Object());
+    }
+
     public Result() {
 
     }
@@ -150,6 +154,10 @@ public class Result {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public static Result fail_500(String msg) {
+        return build(Const.HttpStatusCode.HttpStatus_500, msg);
     }
 
     public static Result fail_500() {

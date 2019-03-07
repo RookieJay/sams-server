@@ -11,4 +11,10 @@
   <select id="selectAllToday" resultMap="CourseResultMap">
     select * from course where to_days(begin_time) = to_days(now())
   </select>
+  <select id="selectAll" resultMap="CourseResultMap">
+    select * from course
+  </select>
+  <insert id="insert" parameterType="pers.zjc.sams.po.Course">
+    insert into course(name, classroom, begin_time, end_time) values (#{name}, #{classroom}, #{beginTime}, #{endTime})
+  </insert>
 </mapper>

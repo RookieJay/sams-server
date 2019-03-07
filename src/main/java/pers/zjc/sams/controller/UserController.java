@@ -6,9 +6,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import pers.zjc.sams.po.Device;
 import pers.zjc.sams.po.Student;
 import pers.zjc.sams.po.Teacher;
 import pers.zjc.sams.po.User;
+import pers.zjc.sams.service.DeviceService;
 import pers.zjc.sams.service.UserService;
 import pers.zjc.sams.utils.Const;
 import pers.zjc.sams.utils.Logger;
@@ -28,6 +30,8 @@ public class UserController extends BaseController{
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private DeviceService deviceService;
 
     /**
      *
@@ -50,18 +54,21 @@ public class UserController extends BaseController{
      * 注册
      */
     @ResponseBody
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "register", method = RequestMethod.POST)
     public Result register(@RequestBody User user) {
-        if (user == null || StringUtils.isEmpty(user.getAccount()) || StringUtils.isEmpty(user.getPassword())) {
-            return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号或密码不能为空", new Object());
+//        if (user == null || StringUtils.isEmpty(user.getAccount()) || StringUtils.isEmpty(user.getPassword())) {
+//            return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号或密码不能为空", new Object());
+//        }
+        if (user == null) {
+            return Result.build(Const.HttpStatusCode.HttpStatus_401, "用户不能为空");
         }
         try {
             //管理员
             if (user.getRole() == 0) {
-                return Result.build(Const.HttpStatusCode.HttpStatus_401, "您没有权限注册管理员账号", new Object());
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "您没有权限注册管理员账号");
             }
             if (userService.isExisted(user)) {
-                return Result.build(Const.HttpStatusCode.HttpStatus_401, "该账号已被注册", new Object());
+                return Result.build(Const.HttpStatusCode.HttpStatus_401, "该账号已被注册");
             }
             switch (user.getRole()) {
                 //学生
@@ -75,7 +82,15 @@ public class UserController extends BaseController{
                         student.setStuId(maxIdStu.getStuId() + 1);
                         user.setId(maxIdStu.getStuId() + 1);
                     }
-                    userService.addStudent(student);
+                    if (userService.addStudent(student)) {
+                        Device device = new Device();
+                        device.setStuId(student.getStuId());
+                        if (deviceService.addStuDevice(device)) {
+                            return Result.ok("学生添加成功且设备绑定成功");
+                        } else {
+                            return Result.fail_500("设备绑定失败");
+                        }
+                    }
                     break;
                 //教师
                 case 2:
@@ -88,20 +103,18 @@ public class UserController extends BaseController{
                         teacher.setId(maxIdTeacher.getId() + 1);
                         user.setId(maxIdTeacher.getId() + 1);
                     }
-                    userService.addTeacher(teacher);
+                    if (userService.addTeacher(teacher)) {
+                        return Result.ok("教师添加成功");
+                    }
                     break;
                 default:
                     break;
-            }
-            if (userService.addUser(user)) {
-                return Result.build(Const.HttpStatusCode.HttpStatus_200, "注册成功");
-            } else {
-                return Result.fail_500();
             }
         } catch (Exception e) {
             e.printStackTrace();
             return Result.fail_500();
         }
+        return Result.fail_500("用户添加失败");
     }
 
     /**
@@ -150,7 +163,7 @@ public class UserController extends BaseController{
         if (userService.modifyStudent(student)) {
             Student stu = userService.getStudent(student);
             Logger.getLogger(this.getClass().getName()).info(stu.getName());
-            return Result.build(Const.HttpStatusCode.HttpStatus_200, "学生"+stu.getName()+"信息修改成功", stu);
+            return Result.build(Const.HttpStatusCode.HttpStatus_200, "学生"+stu.getName()+"信息修改成功");
         } else {
             return Result.build(Const.HttpStatusCode.HttpStatus_500, "学生信息修改失败");
         }
@@ -174,6 +187,11 @@ public class UserController extends BaseController{
         }
     }
 
+    /**
+     * 修改密码
+     * @param user
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "/modify/pwd")
     public Result modifyPwd(@RequestBody User user) {

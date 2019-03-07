@@ -8,4 +8,7 @@ public interface CourseService {
 
     List<Course> getAllCoursesToday();
 
+    boolean addStuCourse(Integer stuId, Integer courseId);
+
+    boolean addCourse(Course course);
 }

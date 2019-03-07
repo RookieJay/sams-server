@@ -8,6 +8,11 @@ public interface Const {
     String AUTHORIZATION = "token";
     String CURRENT_USER_ID = "current_user_id";
 
+    public static final int BYTE = 1;
+    public static final int KB   = 1024;
+    public static final int MB   = 1048576;
+    public static final int GB   = 1073741824;
+
     interface HttpStatusCode {
 
         /**

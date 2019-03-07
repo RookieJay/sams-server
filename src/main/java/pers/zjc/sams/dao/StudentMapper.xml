@@ -17,8 +17,8 @@
     select * from student where stu_id = #{stuId}
   </select>
   <insert id="insert" parameterType="pers.zjc.sams.po.Student">
-    insert into student(stu_id, class_id, birthday, id_card, name, email, tel, sex, status, major) values
-      (#{stuId}, #{classId}, #{birthday}, #{idCard}, #{name}, #{email}, #{tel}, #{sex}, #{status}, #{major})
+    insert into student(stu_id, class_id, birthday, s_name, email, tel, major) values
+      (#{stuId}, #{classId}, #{birthday}, #{sName}, #{email}, #{tel}, #{major})
   </insert>
   <select id="selectMaxIdStu" resultType="pers.zjc.sams.po.Student">
     select * from student where stu_id = (select MAX(stu_id) from student)

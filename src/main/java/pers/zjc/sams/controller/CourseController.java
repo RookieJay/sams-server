@@ -41,4 +41,18 @@ public class CourseController {
 
         return Result.ok();
     }
+
+    /**
+     * 添加课程
+     * @param course
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/add/stuCourse")
+    public Result addStuCourse(@RequestBody Course course) {
+        if (courseService.addCourse(course)) {
+            return Result.ok("课表添加成功");
+        }
+        return Result.ok();
+    }
 }
