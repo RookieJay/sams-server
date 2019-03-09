@@ -21,11 +21,31 @@ public class CourseController {
     @Autowired
     private CourseService courseService;
 
+    /**
+     *当天课表
+     */
+    @ResponseBody
+    @RequestMapping(value = "/today")
+    public Result getTodayCourses() {
+        try {
+            List<Course> courses = courseService.getAllCoursesToday();
+            Map map = new LinkedHashMap();
+            map.put("courses", courses);
+            return Result.ok(map);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_500();
+        }
+    }
+
+    /**
+     * 所有课表
+     */
     @ResponseBody
     @RequestMapping(value = "/all")
     public Result getAllCourses() {
         try {
-            List<Course> courses = courseService.getAllCoursesToday();
+            List<Course> courses = courseService.getAll();
             Map map = new LinkedHashMap();
             map.put("courses", courses);
             return Result.ok(map);
@@ -52,6 +72,21 @@ public class CourseController {
     public Result addStuCourse(@RequestBody Course course) {
         if (courseService.addCourse(course)) {
             return Result.ok("课表添加成功");
+        }
+        return Result.ok();
+    }
+
+
+    /**
+     * 删除课程
+     * @param course
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/delete")
+    public Result delete(@RequestBody Course course) {
+        if (courseService.delete(course)) {
+            return Result.ok("课表删除成功");
         }
         return Result.ok();
     }

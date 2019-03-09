@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="pers.zjc.sams.dao.FaceMapper" >
-  <resultMap id="BaseResultMap7" type="pers.zjc.sams.po.Face" >
+  <resultMap id="FaceResultMap" type="pers.zjc.sams.po.Face" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="file_name" property="fileName" jdbcType="VARCHAR" />
     <result column="path" property="path" jdbcType="VARCHAR" />
@@ -9,4 +9,13 @@
     <result column="upload_time" property="uploadTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
+  <insert id="insert" parameterType="pers.zjc.sams.po.Face">
+    insert into face(file_name, path, stu_id) VALUES (#{fileName}, #{path}, #{stuId})
+  </insert>
+  <select id="selectByStuId" parameterType="pers.zjc.sams.po.Face" resultType="pers.zjc.sams.po.Face">
+    select * from face where stu_id = #{stuId}
+  </select>
+  <update id="updateByStuId" parameterType="pers.zjc.sams.po.Face">
+    update face set file_name = #{fileName}, path = #{path} where stu_id = #{stuId}
+  </update>
 </mapper>

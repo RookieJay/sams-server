@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean updateStuById(String id) {
+    public boolean updateStuById(int id) {
         return false;
     }
 
@@ -216,5 +216,10 @@ public class UserServiceImpl implements UserService {
             return false;
         }
         return false;
+    }
+
+    @Override
+    public boolean updateUser(User user) {
+        return userMapper.updateUser(user);
     }
 }

@@ -12,7 +12,7 @@ public interface UserService {
 
     boolean addStudent(Student student);
 
-    boolean updateStuById(String id);
+    boolean updateStuById(int id);
 
     boolean deleteStuById(String id);
 
@@ -45,4 +45,6 @@ public interface UserService {
     boolean isPwdCorrect(User user);
 
     boolean modifyPwd(User user);
+
+    boolean updateUser(User user);
 }

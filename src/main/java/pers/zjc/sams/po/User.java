@@ -19,6 +19,8 @@ public class User implements Serializable {
 
     private Integer role;
 
+    private String deviceId;
+
     public Integer getId() {
         return id;
     }
@@ -67,6 +69,14 @@ public class User implements Serializable {
         this.role = role;
     }
 
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -76,6 +86,7 @@ public class User implements Serializable {
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 ", role=" + role +
+                ", deviceId='" + deviceId + '\'' +
                 '}';
     }
 }

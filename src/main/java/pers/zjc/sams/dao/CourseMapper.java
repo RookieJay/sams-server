@@ -19,4 +19,6 @@ public interface CourseMapper {
     int updateByPrimaryKey(Course record);
 
     List<Course> selectAllToday();
+
+    List<Course> selectAll();
 }

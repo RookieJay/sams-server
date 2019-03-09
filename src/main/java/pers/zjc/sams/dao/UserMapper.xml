@@ -33,4 +33,7 @@
   <update id="updatePwd" parameterType="pers.zjc.sams.po.User">
     update user set password = #{password} where id = #{id}
   </update>
+  <update id="updateUser" parameterType="pers.zjc.sams.po.User">
+    update user set account = #{account}, password = #{password} where id = #{id}
+  </update>
 </mapper>

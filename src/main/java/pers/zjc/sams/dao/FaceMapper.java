@@ -14,4 +14,8 @@ public interface FaceMapper {
     int updateByPrimaryKeySelective(Face record);
 
     int updateByPrimaryKey(Face record);
+
+    Face selectByStuId(Face face);
+
+    int updateByStuId(Face face);
 }

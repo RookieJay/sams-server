@@ -17,4 +17,7 @@
   <insert id="insert" parameterType="pers.zjc.sams.po.Course">
     insert into course(name, classroom, begin_time, end_time) values (#{name}, #{classroom}, #{beginTime}, #{endTime})
   </insert>
+  <delete id="deleteByPrimaryKey" parameterType="pers.zjc.sams.po.Course">
+    delete from course where id = #{id}
+  </delete>
 </mapper>

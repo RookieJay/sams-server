@@ -42,7 +42,7 @@ public class LoginController {
      */
     @ResponseBody
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public Result login(@RequestBody User user, Integer deviceId) {
+    public Result login(@RequestBody User user) {
         try {
             String token = JWTUtils.createJWT(user.getAccount(), user.getPassword(), 2 * 60 * 60);
 //            Claims claims = JWTUtils.parseJWT(token);
@@ -75,15 +75,15 @@ public class LoginController {
                     case 1:
                         Student student = studentService.getStudent(localUser.getId());
                         if (student != null) {
-                            logger.info(deviceId);
-                            if (!deviceService.getDeviceId(student.getStuId()).equals(deviceId)) {
+                            logger.info(user.getDeviceId());
+                            if (!deviceService.getDeviceId(student.getStuId()).equals(user.getDeviceId())) {
                                 return Result.build(Const.HttpStatusCode.HttpStatus_401, "此设备非登录账号绑定设备", map);
                             }
                             map.put("role", "1");
                             map.put("userId", String.valueOf(localUser.getId()));
                             map.put("token", token);
                             map.put("student", student);
-                            map.put("userName", student.getName());
+                            map.put("userName", student.getsName());
                             map.put("major", student.getMajor());
                             AttenceRecord record = new AttenceRecord();
                             record.setStuId(student.getStuId());
@@ -91,7 +91,7 @@ public class LoginController {
                             record.setUpdateTime(TimeUtils.getTodayEnd());
                             List<AttenceRecordVo> records = attenceService.getByMultiContidion(record);
                             map.put("records", records);
-                            return new Result(Const.HttpStatusCode.HttpStatus_200, "学生"+student.getName()+"登录成功", map);
+                            return new Result(Const.HttpStatusCode.HttpStatus_200, "学生"+student.getsName()+"登录成功", map);
                         }
                         break;
                     //教师
@@ -103,8 +103,8 @@ public class LoginController {
                             map.put("userId", String.valueOf(localUser.getId()));
                             map.put("token", token);
                             map.put("major", teacher.getMajor());
-                            map.put("userName", teacher.getName());
-                            return new Result(Const.HttpStatusCode.HttpStatus_200, "教师"+teacher.getName()+"登录成功", map);
+                            map.put("userName", teacher.gettName());
+                            return new Result(Const.HttpStatusCode.HttpStatus_200, "教师"+teacher.gettName()+"登录成功", map);
                         }
                         break;
                     default:

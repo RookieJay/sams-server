@@ -11,4 +11,8 @@ public interface CourseService {
     boolean addStuCourse(Integer stuId, Integer courseId);
 
     boolean addCourse(Course course);
+
+    List<Course> getAll();
+
+    boolean delete(Course course);
 }

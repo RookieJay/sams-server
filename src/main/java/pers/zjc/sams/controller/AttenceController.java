@@ -63,7 +63,6 @@ public class AttenceController {
                 record.setCreateTime(TimeUtils.string2Date("1900-01-01 00:00:00", Const.DateFormat.WITH_HMS));
                 record.setCreateTime(TimeUtils.string2Date("2100-01-01 00:00:00", Const.DateFormat.WITH_HMS));
             }
-            Logger.getLogger("当前时间").info(TimeUtils.date2String(new Date()));
             System.out.println(TimeUtils.date2String(record.getCreateTime()));
             List<AttenceRecordVo> records = attenceService.getByMultiContidion(record);
             map.put("records", records);

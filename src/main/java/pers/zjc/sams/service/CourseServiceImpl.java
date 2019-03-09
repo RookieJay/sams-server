@@ -34,4 +34,14 @@ public class CourseServiceImpl implements CourseService {
     public boolean addCourse(Course course) {
         return courseMapper.insert(course) > 0;
     }
+
+    @Override
+    public List<Course> getAll() {
+        return courseMapper.selectAll();
+    }
+
+    @Override
+    public boolean delete(Course course) {
+        return courseMapper.deleteByPrimaryKey(course.getId()) > 0;
+    }
 }

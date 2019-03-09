@@ -59,7 +59,7 @@ public class SignController {
                 record.setCourseId(signRecord.getCourseId());
                 Student student = studentService.getStudent(signRecord.getStuId());
                 if (student != null) {
-                    record.setOperator(student.getName());
+                    record.setOperator(student.getsName());
                 } else {
                     record.setOperator("神秘人");
                 }

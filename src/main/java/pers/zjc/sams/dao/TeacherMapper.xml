@@ -28,8 +28,8 @@
         <if test="major != null and major != ''">
           major = #{major},
         </if>
-        <if test="name != null and name != ''">
-          name = #{name},
+        <if test="tName != null and tName != ''">
+          t_name = #{tName},
         </if>
         <if test="email != null and email != ''">
           email = #{email},
@@ -37,7 +37,7 @@
         <if test="tel != null and tel != ''">
           tel = #{tel},
         </if>
-        <if test="sex != null and major != ''">
+        <if test="sex != null and sex != 0">
           sex = #{sex}
         </if>
       </set>

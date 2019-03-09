@@ -10,5 +10,5 @@ public interface DeviceService {
 
     boolean isDeviceExisted(String deviceId);
 
-    Integer getDeviceId(Integer stuId);
+    String getDeviceId(Integer stuId);
 }

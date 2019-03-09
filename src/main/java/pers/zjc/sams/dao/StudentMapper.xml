@@ -6,7 +6,7 @@
     <result column="class_id" property="classId" jdbcType="INTEGER" />
     <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
     <result column="id_card" property="idCard" jdbcType="CHAR" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="s_name" property="sName" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="tel" property="tel" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="TINYINT" />
@@ -38,15 +38,18 @@
       <if test="idCard != null">
         id_card = #{idCard},
       </if>
-      <if test="name != null">
-        name = #{name},
+      <if test="sName != null">
+        s_name = #{sName},
       </if>
-      <if test="sex != null">
+      <if test="sex != 0">
         sex = #{sex},
       </if>
       <if test="status != null">
         status = #{status},
       </if>
+        <if test="tel != null">
+          tel = #{tel},
+        </if>
       <if test="major != null">
         major = #{major}
       </if>

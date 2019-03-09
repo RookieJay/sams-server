@@ -17,13 +17,15 @@ import pers.zjc.sams.utils.Logger;
 import pers.zjc.sams.utils.Result;
 import pers.zjc.sams.utils.StringUtils;
 
+import java.math.BigDecimal;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 
 @Controller
-@RequestMapping(value = "api/mobile/users")
+@ResponseBody
+@RequestMapping(value = "api/mobile/users", method = RequestMethod.POST)
 public class UserController extends BaseController{
 
     private static final String TAG = "UserController";
@@ -56,14 +58,10 @@ public class UserController extends BaseController{
      * 注册
      */
     @ResponseBody
-    @RequestMapping(value = "register", method = RequestMethod.POST)
-    public Result register(@RequestBody User user, String deviceId) {
-//        if (user == null || StringUtils.isEmpty(user.getAccount()) || StringUtils.isEmpty(user.getPassword())) {
-//            return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号或密码不能为空", new Object());
-//        }
-        logger.info(deviceId);
-        if (user == null) {
-            return Result.build(Const.HttpStatusCode.HttpStatus_403, "用户不能为空");
+    @RequestMapping(value = "register")
+    public Result register(@RequestBody User user) {
+        if (user == null || StringUtils.isEmpty(user.getAccount()) || StringUtils.isEmpty(user.getPassword())) {
+            return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号或密码不能为空", new Object());
         }
         if (user.getRole() == null) {
             return Result.build(Const.HttpStatusCode.HttpStatus_403, "用户角色不能为空");
@@ -86,20 +84,24 @@ public class UserController extends BaseController{
                         user.setId(Const.DEFAULT_ID.DEFAULT_STU_ID);
                     } else {
                         student.setStuId(maxIdStu.getStuId() + 1);
+                        student.setsName(user.getAccount());
+                        student.setClassId(1501);
                         user.setId(maxIdStu.getStuId() + 1);
                     }
                     if (userService.addStudent(student)) {
                         Device device = new Device();
                         device.setStuId(student.getStuId());
-                        if (StringUtils.isEmpty(deviceId)) {
+                        if (StringUtils.isEmpty(user.getDeviceId())) {
                             return Result.fail_500("设备编号不能为空");
                         }
-                        if (deviceService.isDeviceExisted(deviceId)) {
+                        if (deviceService.isDeviceExisted(user.getDeviceId())) {
                             return Result.fail_500("此设备已经注册，若有疑问，请联系管理员");
                         }
-                        device.setDeviceId(deviceId);
+                        device.setDeviceId(user.getDeviceId());
                         if (deviceService.addStuDevice(device)) {
-                            return Result.ok("学生添加成功且设备绑定成功");
+                            if (userService.updateUser(user)) {
+                                return Result.ok("学生添加成功且设备绑定成功");
+                            }
                         } else {
                             return Result.fail_500("设备绑定失败");
                         }
@@ -117,7 +119,9 @@ public class UserController extends BaseController{
                         user.setId(maxIdTeacher.getId() + 1);
                     }
                     if (userService.addTeacher(teacher)) {
-                        return Result.ok("教师添加成功");
+                        if (userService.updateUser(user)) {
+                            return Result.ok("教师添加成功");
+                        }
                     }
                     break;
                 default:
@@ -175,8 +179,8 @@ public class UserController extends BaseController{
         }
         if (userService.modifyStudent(student)) {
             Student stu = userService.getStudent(student);
-            Logger.getLogger(this.getClass().getName()).info(stu.getName());
-            return Result.build(Const.HttpStatusCode.HttpStatus_200, "学生"+stu.getName()+"信息修改成功");
+            Logger.getLogger(this.getClass().getName()).info(stu.getsName());
+            return Result.build(Const.HttpStatusCode.HttpStatus_200, "学生"+stu.getsName()+"信息修改成功");
         } else {
             return Result.build(Const.HttpStatusCode.HttpStatus_500, "学生信息修改失败");
         }
@@ -188,13 +192,14 @@ public class UserController extends BaseController{
     @ResponseBody
     @RequestMapping(value = "/teachers/info/modify")
     public Result modifyTeacher(@RequestBody Teacher teacher) {
+        logger.info("teacher"+ teacher.toString());
         if (StringUtils.isEmpty(String.valueOf(teacher.getId()))) {
             return Result.build(Const.HttpStatusCode.HttpStatus_401, "教师编号不能为空");
         }
         if (userService.modifyTeacher(teacher)) {
             Teacher teac = userService.getTeacher(teacher);
-            Logger.getLogger(this.getClass().getName()).info(teac.getName());
-            return Result.build(Const.HttpStatusCode.HttpStatus_200, "教师"+teac.getName()+"信息修改成功", teac);
+            Logger.getLogger(this.getClass().getName()).info(teac.gettName());
+            return Result.build(Const.HttpStatusCode.HttpStatus_200, "教师"+teac.gettName()+"信息修改成功");
         } else {
             return Result.build(Const.HttpStatusCode.HttpStatus_500, "教师信息修改失败");
         }

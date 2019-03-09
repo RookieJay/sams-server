@@ -31,7 +31,7 @@ public class JWTUtils {
 
         long nowMillis = System.currentTimeMillis();
         Time now = new Time(nowMillis);
-        System.out.println( " now :" + now);
+//        System.out.println( " now :" + now);
 
         SecretKey key = generalKey();
 
@@ -42,12 +42,12 @@ public class JWTUtils {
                 .setIssuedAt(now)
                 .setSubject("1111")
                 .signWith(signatureAlgorithm, key);
-        System.out.println( " builder :" + builder);
+//        System.out.println( " builder :" + builder);
         if (ttlMillis >= 0) {
             long expMillis = nowMillis + ttlMillis;
-            System.out.println( " expMillis :" + expMillis);
+//            System.out.println( " expMillis :" + expMillis);
             Time exp = new Time(expMillis);
-            System.out.println( " exp :" + exp);
+//            System.out.println( " exp :" + exp);
             builder.setExpiration(exp);
         }
         return builder.compact();
@@ -74,9 +74,9 @@ public class JWTUtils {
                 .signWith(signatureAlgorithm, key);
         if (ttlMillis >= 0) {
             long expMillis = nowMillis + ttlMillis;
-            System.out.println( " expMillis :" + expMillis);
+//            System.out.println( " expMillis :" + expMillis);
             Time exp = new Time(expMillis);
-            System.out.println( " exp :" + exp);
+//            System.out.println( " exp :" + exp);
             builder.setExpiration(exp);
         }
         return builder.compact();

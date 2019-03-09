@@ -23,4 +23,6 @@ public interface UserMapper {
     int updatePwd(User user);
 
     User selectById(User user);
+
+    boolean updateUser(User user);
 }

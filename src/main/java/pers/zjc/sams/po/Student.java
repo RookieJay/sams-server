@@ -55,12 +55,12 @@ public class Student {
         this.idCard = idCard == null ? null : idCard.trim();
     }
 
-    public String getName() {
+    public String getsName() {
         return sName;
     }
 
-    public void setName(String name) {
-        this.sName = name == null ? null : name.trim();
+    public void setsName(String sName) {
+        this.sName = sName;
     }
 
     public String getEmail() {

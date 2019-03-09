@@ -29,11 +29,11 @@ public class DeviceServiceImpl implements DeviceService {
     }
 
     @Override
-    public Integer getDeviceId(Integer stuId) {
+    public String getDeviceId(Integer stuId) {
         Device device = deviceMapper.selectId(stuId);
         if (device != null) {
-            return Integer.valueOf(device.getDeviceId());
+            return device.getDeviceId();
         }
-        return 0;
+        return "";
     }
 }

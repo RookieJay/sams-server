@@ -29,12 +29,12 @@ public class Teacher {
         this.major = major == null ? null : major.trim();
     }
 
-    public String getName() {
+    public String gettName() {
         return tName;
     }
 
-    public void setName(String name) {
-        this.tName = name == null ? null : name.trim();
+    public void settName(String tName) {
+        this.tName = tName;
     }
 
     public String getEmail() {
@@ -59,5 +59,17 @@ public class Teacher {
 
     public void setSex(int sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "id=" + id +
+                ", major='" + major + '\'' +
+                ", tName='" + tName + '\'' +
+                ", email='" + email + '\'' +
+                ", tel='" + tel + '\'' +
+                ", sex=" + sex +
+                '}';
     }
 }
