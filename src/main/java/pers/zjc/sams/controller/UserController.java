@@ -28,6 +28,8 @@ public class UserController extends BaseController{
 
     private static final String TAG = "UserController";
 
+    Logger logger = Logger.getLogger(TAG);
+
     @Autowired
     private UserService userService;
     @Autowired
@@ -55,12 +57,16 @@ public class UserController extends BaseController{
      */
     @ResponseBody
     @RequestMapping(value = "register", method = RequestMethod.POST)
-    public Result register(@RequestBody User user) {
+    public Result register(@RequestBody User user, String deviceId) {
 //        if (user == null || StringUtils.isEmpty(user.getAccount()) || StringUtils.isEmpty(user.getPassword())) {
 //            return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号或密码不能为空", new Object());
 //        }
+        logger.info(deviceId);
         if (user == null) {
-            return Result.build(Const.HttpStatusCode.HttpStatus_401, "用户不能为空");
+            return Result.build(Const.HttpStatusCode.HttpStatus_403, "用户不能为空");
+        }
+        if (user.getRole() == null) {
+            return Result.build(Const.HttpStatusCode.HttpStatus_403, "用户角色不能为空");
         }
         try {
             //管理员
@@ -85,6 +91,13 @@ public class UserController extends BaseController{
                     if (userService.addStudent(student)) {
                         Device device = new Device();
                         device.setStuId(student.getStuId());
+                        if (StringUtils.isEmpty(deviceId)) {
+                            return Result.fail_500("设备编号不能为空");
+                        }
+                        if (deviceService.isDeviceExisted(deviceId)) {
+                            return Result.fail_500("此设备已经注册，若有疑问，请联系管理员");
+                        }
+                        device.setDeviceId(deviceId);
                         if (deviceService.addStuDevice(device)) {
                             return Result.ok("学生添加成功且设备绑定成功");
                         } else {

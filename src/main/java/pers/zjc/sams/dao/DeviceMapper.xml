@@ -9,4 +9,26 @@
   <insert id="insert" parameterType="pers.zjc.sams.po.Device">
     insert into device(device_id, stu_id) values (#{deviceId}, #{stuId})
   </insert>
+  <update id="updateByPrimaryKey" parameterType="pers.zjc.sams.po.Device">
+    update device
+    <set>
+      <if test="deviceStatus != null">
+        device_status = #{deviceStatus},
+      </if>
+    </set>
+    <where>
+      <if test="deviceId != null">
+        device_id = #{deviceId},
+      </if>
+      <if test="stuId != null">
+        and stu_id = #{stuId}
+      </if>
+    </where>
+  </update>
+  <select id="selectByPrimaryKey" parameterType="String" resultType="pers.zjc.sams.po.Device">
+    select * from device where device_id = #{deviceId};
+  </select>
+  <select id="selectId" parameterType="Integer" resultType="pers.zjc.sams.po.Device">
+    select * from device where stu_id = #{stuId}
+  </select>
 </mapper>

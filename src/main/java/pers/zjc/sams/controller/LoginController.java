@@ -14,10 +14,6 @@ import pers.zjc.sams.po.*;
 import pers.zjc.sams.service.*;
 import pers.zjc.sams.utils.*;
 import pers.zjc.sams.vo.AttenceRecordVo;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +21,8 @@ import java.util.Map;
 @Controller
 @RequestMapping(value = "api/mobile/login")
 public class LoginController {
+
+    Logger logger = Logger.getLogger(LoginController.class);
 
     @Autowired
     private UserService userService;
@@ -35,15 +33,16 @@ public class LoginController {
     @Autowired
     private TeacherService teacherService;
     @Autowired
-    AttenceService attenceService;
-
+    private AttenceService attenceService;
+    @Autowired
+    private DeviceService deviceService;
     /**
      *
      * 登录
      */
     @ResponseBody
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public Result login(@RequestBody User user) {
+    public Result login(@RequestBody User user, Integer deviceId) {
         try {
             String token = JWTUtils.createJWT(user.getAccount(), user.getPassword(), 2 * 60 * 60);
 //            Claims claims = JWTUtils.parseJWT(token);
@@ -76,6 +75,10 @@ public class LoginController {
                     case 1:
                         Student student = studentService.getStudent(localUser.getId());
                         if (student != null) {
+                            logger.info(deviceId);
+                            if (!deviceService.getDeviceId(student.getStuId()).equals(deviceId)) {
+                                return Result.build(Const.HttpStatusCode.HttpStatus_401, "此设备非登录账号绑定设备", map);
+                            }
                             map.put("role", "1");
                             map.put("userId", String.valueOf(localUser.getId()));
                             map.put("token", token);

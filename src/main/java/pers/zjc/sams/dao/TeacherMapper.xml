@@ -4,7 +4,7 @@
   <resultMap id="TeacherResultMap" type="pers.zjc.sams.po.Teacher" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="major" property="major" jdbcType="VARCHAR" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="t_name" property="tName" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="tel" property="tel" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="TINYINT" />
@@ -13,8 +13,8 @@
     select * from teacher where id = #{id}
   </select>
   <insert id="insert" parameterType="pers.zjc.sams.po.Teacher">
-    insert into teacher (id, major, name, email, tel)
-    values (#{id}, #{major}, #{name}, #{email}, #{tel});
+    insert into teacher (id, major, t_name, email, tel)
+    values (#{id}, #{major}, #{tName}, #{email}, #{tel});
   </insert>
   <select id="selectMaxIdTeac" resultType="pers.zjc.sams.po.Teacher">
     select * from teacher where id = (select max(id) from teacher)

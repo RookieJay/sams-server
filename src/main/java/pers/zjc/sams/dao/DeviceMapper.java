@@ -1,10 +1,11 @@
 package pers.zjc.sams.dao;
 
+import org.apache.ibatis.annotations.Param;
 import pers.zjc.sams.po.Device;
 
 public interface DeviceMapper {
 
-    int deleteByPrimaryKey(String deviceId);
+    int deleteByPrimaryKey(@Param("deviceId") String deviceId);
 
     int insert(Device record);
 
@@ -15,4 +16,6 @@ public interface DeviceMapper {
     int updateByPrimaryKeySelective(Device record);
 
     int updateByPrimaryKey(Device record);
+
+    Device selectId(@Param("stuId") Integer stuId);
 }
