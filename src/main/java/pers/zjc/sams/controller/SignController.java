@@ -82,12 +82,18 @@ public class SignController {
     @RequestMapping(value = "/list")
     public Result getCourseSignRecord(@RequestBody SignRecord record, String interval) {
         Logger.getLogger("interval").info(interval);
+        Logger.getLogger("record is null").info(String.valueOf(record == null));
         try {
             List<SignRecord> recordList;
             Map map = new LinkedHashMap();
-            map.put("records", map);
-            if (record != null && record.getCourseId() == null && record.getStuId() == null) {
-                return Result.build(Const.HttpStatusCode.HttpStatus_401, "至少需要一个参数", map);
+
+//            if (record != null && record.getCourseId() == null && record.getStuId() == null) {
+//                return Result.build(Const.HttpStatusCode.HttpStatus_401, "至少需要一个参数", map);
+//            }
+            if (record == null) {
+                recordList = signService.getAllSinRecords();
+                map.put("records", recordList);
+                return Result.build(Const.HttpStatusCode.HttpStatus_200, "查询列表成功", map);
             }
             if (StringUtils.isEmpty(interval)) {
                 recordList = signService.getCourseSignRecordsMonth(record);

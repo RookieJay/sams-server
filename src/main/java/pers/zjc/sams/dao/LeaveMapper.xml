@@ -23,7 +23,10 @@
           </where>
     </select>
     <select id="selectAll" resultMap="LeaveResultMap">
-        select * from `leave`
+        select a.*, b.name AS "courseName", c.s_name as "stuName" from `leave` a, course b, student c
+        <where>
+        a.course_id = b.id  and a.stu_id = c.stu_id
+        </where>
     </select>
     <update id="revoke" parameterType="String">
         update `leave`

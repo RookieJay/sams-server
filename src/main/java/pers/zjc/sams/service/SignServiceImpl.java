@@ -106,4 +106,9 @@ public class SignServiceImpl implements SignService {
     public List<SignRecord> getSignRecordsToday(SignRecord record) {
         return signMapper.commonSelectToday(record);
     }
+
+    @Override
+    public List<SignRecord> getAllSinRecords() {
+        return signMapper.selectAll();
+    }
 }

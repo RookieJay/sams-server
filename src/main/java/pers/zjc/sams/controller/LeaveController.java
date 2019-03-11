@@ -71,10 +71,17 @@ public class LeaveController {
     @RequestMapping(value = "/all", method = RequestMethod.POST)
     public Result getAllLeaves() {
         List<LeaveVo> leaveResult = leaveService.getAllLeaves();
-        if (leaveResult != null) {
-            return Result.build(Const.HttpStatusCode.HttpStatus_200, "获取所有请假信息成功", leaveResult);
-        } else {
-            return Result.build(Const.HttpStatusCode.HttpStatus_500, "获取所有请假信息失败", new Object());
+        try {
+            if (leaveResult != null) {
+                Map map = new LinkedHashMap<>();
+                map.put("records", leaveResult);
+                return Result.build(Const.HttpStatusCode.HttpStatus_200, "获取所有请假信息成功", map);
+            } else {
+                return Result.fail_array_500("records");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_array_500("records");
         }
     }
 

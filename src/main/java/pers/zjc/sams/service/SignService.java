@@ -21,4 +21,6 @@ public interface SignService {
     List<SignRecord> getCourseSignRecordsMonth(SignRecord record);
 
     List<SignRecord> getSignRecordsToday(SignRecord record);
+
+    List<SignRecord> getAllSinRecords();
 }

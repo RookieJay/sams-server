@@ -29,9 +29,9 @@
   <select id="commonSelectToday" parameterType="pers.zjc.sams.po.SignRecord" resultMap="signResultMap">
     select a.*, b.name , c.s_name  from sign_record a, course b, student c
     <where>
-      a.course_id = b.id  and a.stu_id = c.stu_id and
+      a.course_id = b.id  and a.stu_id = c.stu_id
       <if test="stuId != null">
-        c.stu_id=#{stuId}
+       and c.stu_id=#{stuId}
       </if>
       <if test="courseId != null">
         and a.course_id = #{courseId}
@@ -43,9 +43,9 @@
   <select id="commonSelectWeek" parameterType="pers.zjc.sams.po.SignRecord" resultMap="signResultMap">
     select a.*, b.name , c.s_name  from sign_record a, course b, student c
     <where>
-      a.course_id = b.id  and a.stu_id = c.stu_id and
+      a.course_id = b.id  and a.stu_id = c.stu_id
       <if test="stuId != null">
-        c.stu_id=#{stuId}
+        and c.stu_id=#{stuId}
       </if>
       <if test="courseId != null">
         and a.course_id = #{courseId}
@@ -57,14 +57,21 @@
   <select id="commonSelectMonth" parameterType="pers.zjc.sams.po.SignRecord" resultMap="signResultMap">
     select a.*, b.name , c.s_name  from sign_record a, course b, student c
     <where>
-      a.course_id = b.id  and a.stu_id = c.stu_id and
+      a.course_id = b.id  and a.stu_id = c.stu_id
       <if test="stuId != null">
-        a.stu_id=#{stuId}
+        and a.stu_id=#{stuId}
       </if>
       <if test="courseId != null">
         and a.course_id = #{courseId}
       </if>
         and DATE_SUB(CURDATE(), INTERVAL 30 DAY) <![CDATA[<=]]> date(a.sign_time)
+    </where>
+  </select>
+
+  <select id="selectAll" resultMap="signResultMap">
+    select a.*, b.name , c.s_name  from sign_record a, course b, student c
+    <where>
+    a.course_id = b.id  and a.stu_id = c.stu_id
     </where>
   </select>
 </mapper>
