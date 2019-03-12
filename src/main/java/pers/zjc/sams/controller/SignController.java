@@ -135,4 +135,18 @@ public class SignController {
         }
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/all")
+    public Result getAllRecords() {
+        try {
+            List<SignRecord> records = signService.getAllSinRecords();
+            Map map = new LinkedHashMap();
+            map.put("records", records);
+            return Result.build(Const.HttpStatusCode.HttpStatus_200, "获勤记录成功" , map);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_500("records");
+        }
+    }
+
 }
