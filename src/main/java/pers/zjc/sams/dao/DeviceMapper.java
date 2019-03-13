@@ -2,6 +2,9 @@ package pers.zjc.sams.dao;
 
 import org.apache.ibatis.annotations.Param;
 import pers.zjc.sams.po.Device;
+import pers.zjc.sams.vo.DeviceVo;
+
+import java.util.List;
 
 public interface DeviceMapper {
 
@@ -18,4 +21,6 @@ public interface DeviceMapper {
     int updateByPrimaryKey(Device record);
 
     Device selectId(@Param("stuId") Integer stuId);
+
+    List<DeviceVo> selectAll();
 }

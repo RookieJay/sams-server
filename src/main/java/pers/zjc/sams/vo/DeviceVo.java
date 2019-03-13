@@ -1,11 +1,14 @@
-package pers.zjc.sams.po;
+package pers.zjc.sams.vo;
 
-public class Device {
+public class DeviceVo {
+
     private String deviceId;
 
     private Integer deviceStatus;
 
     private Integer stuId;
+
+    private String stuName;
 
     private String deviceModel;
 
@@ -16,7 +19,7 @@ public class Device {
     }
 
     public void setDeviceId(String deviceId) {
-        this.deviceId = deviceId == null ? null : deviceId.trim();
+        this.deviceId = deviceId;
     }
 
     public Integer getDeviceStatus() {
@@ -33,6 +36,14 @@ public class Device {
 
     public void setStuId(Integer stuId) {
         this.stuId = stuId;
+    }
+
+    public String getStuName() {
+        return stuName;
+    }
+
+    public void setStuName(String stuName) {
+        this.stuName = stuName;
     }
 
     public String getDeviceModel() {

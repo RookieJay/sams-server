@@ -38,6 +38,10 @@ public class Result {
         return new Result(null);
     }
 
+    public static Result ok(Map map) {
+        return new Result(Const.HttpStatusCode.HttpStatus_200, "查询列表成功", map);
+    }
+
     public static Result ok(String msg) {
         return new Result(Const.HttpStatusCode.HttpStatus_200, msg, new Object());
     }
@@ -173,6 +177,10 @@ public class Result {
     public static Result fail_array_500(String key) {
         Map map = new HashMap();
         map.put(key, new ArrayList<>());
+        return build(Const.HttpStatusCode.HttpStatus_500, "服务端未知错误", map);
+    }
+
+    public static Result fail_500(Map map) {
         return build(Const.HttpStatusCode.HttpStatus_500, "服务端未知错误", map);
     }
 }

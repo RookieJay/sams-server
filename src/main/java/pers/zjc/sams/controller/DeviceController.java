@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import pers.zjc.sams.po.Device;
 import pers.zjc.sams.service.DeviceService;
 import pers.zjc.sams.utils.Result;
+import pers.zjc.sams.vo.DeviceVo;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "api/mobile/device")
@@ -17,7 +22,7 @@ public class DeviceController {
     private DeviceService deviceService;
 
     @ResponseBody
-    @RequestMapping(value = "api/mobile/update")
+    @RequestMapping(value = "/update")
     public Result updateDevice(@RequestBody Device device) {
         try {
             if (deviceService.updateDevice(device)) {
@@ -29,4 +34,19 @@ public class DeviceController {
         }
         return Result.fail_500("设备修改失败");
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/all")
+    public Result getAllDevices() {
+        try {
+            List<DeviceVo> devices = deviceService.getAll();
+            Map map = new LinkedHashMap();
+            map.put("devices", devices);
+            return Result.ok(map);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_array_500("devices");
+        }
+    }
+
 }

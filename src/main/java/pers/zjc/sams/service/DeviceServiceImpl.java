@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pers.zjc.sams.dao.DeviceMapper;
 import pers.zjc.sams.po.Device;
+import pers.zjc.sams.vo.DeviceVo;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -35,5 +38,10 @@ public class DeviceServiceImpl implements DeviceService {
             return device.getDeviceId();
         }
         return "";
+    }
+
+    @Override
+    public List<DeviceVo> getAll() {
+        return deviceMapper.selectAll();
     }
 }
