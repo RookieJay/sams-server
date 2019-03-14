@@ -1,18 +1,22 @@
-package pers.zjc.sams.po;
+package pers.zjc.sams.vo;
 
-public class StuCourse {
+public class StuCourseVo {
 
-    private String id;
+    private int id;
 
     private int stuId;
 
+    private String stuName;
+
     private int courseId;
 
-    public String getId() {
+    private String courseName;
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

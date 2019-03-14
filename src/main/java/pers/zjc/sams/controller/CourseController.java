@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pers.zjc.sams.po.Course;
 import pers.zjc.sams.service.CourseService;
+import pers.zjc.sams.utils.Const;
 import pers.zjc.sams.utils.Result;
 
 import java.util.LinkedHashMap;
@@ -55,20 +56,13 @@ public class CourseController {
         }
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/common")
-    public Result commonSelect(@RequestBody Course course) {
-
-        return Result.ok();
-    }
-
     /**
      * 添加课程
      * @param course
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/add/stuCourse")
+    @RequestMapping(value = "/add")
     public Result addStuCourse(@RequestBody Course course) {
         if (courseService.addCourse(course)) {
             return Result.ok("课表添加成功");
@@ -90,4 +84,20 @@ public class CourseController {
         }
         return Result.ok();
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/stu/add")
+    public Result addStuCourse(Integer stuId, Integer courseId) {
+        try {
+            if (courseService.addStuCourse(stuId, courseId)) {
+                return Result.ok("学生排课成功");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_500();
+        }
+        return Result.fail_500("学生排课失败");
+    }
+
+
 }

@@ -85,12 +85,12 @@ public class LoginController {
                             map.put("student", student);
                             map.put("userName", student.getsName());
                             map.put("major", student.getMajor());
-                            AttenceRecord record = new AttenceRecord();
-                            record.setStuId(student.getStuId());
-                            record.setCreateTime(TimeUtils.getTodayStart());
-                            record.setUpdateTime(TimeUtils.getTodayEnd());
-                            List<AttenceRecordVo> records = attenceService.getByMultiContidion(record);
-                            map.put("records", records);
+//                            AttenceRecord record = new AttenceRecord();
+//                            record.setStuId(student.getStuId());
+//                            record.setCreateTime(TimeUtils.getTodayStart());
+//                            record.setUpdateTime(TimeUtils.getTodayEnd());
+//                            List<AttenceRecordVo> records = attenceService.getByMultiContidion(record);
+//                            map.put("records", records);
                             return new Result(Const.HttpStatusCode.HttpStatus_200, "学生"+student.getsName()+"登录成功", map);
                         }
                         break;

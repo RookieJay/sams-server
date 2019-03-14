@@ -1,6 +1,7 @@
 package pers.zjc.sams.service;
 
 import pers.zjc.sams.po.Course;
+import pers.zjc.sams.vo.StuCourseVo;
 
 import java.util.List;
 
@@ -15,4 +16,6 @@ public interface CourseService {
     List<Course> getAll();
 
     boolean delete(Course course);
+
+    List<StuCourseVo> getStuCourses(Integer stuId);
 }

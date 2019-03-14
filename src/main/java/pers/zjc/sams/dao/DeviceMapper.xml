@@ -7,6 +7,7 @@
     <result column="stu_id" property="stuId" jdbcType="INTEGER" />
     <result column="device_model" property="deviceModel" jdbcType="VARCHAR" />
     <result column="device_version" property="deviceVersion" jdbcType="VARCHAR" />
+    <result column="s_name" property="stuName" jdbcType="VARCHAR" />
   </resultMap>
   <insert id="insert" parameterType="pers.zjc.sams.po.Device">
     insert into device(device_id, stu_id, device_model, device_version) values (#{deviceId}, #{stuId}, #{deviceModel}, #{deviceVersion})

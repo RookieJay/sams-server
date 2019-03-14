@@ -6,7 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 import pers.zjc.sams.dao.CourseMapper;
 import pers.zjc.sams.dao.StuCourseMapper;
 import pers.zjc.sams.po.Course;
+import pers.zjc.sams.po.StuCourse;
 import pers.zjc.sams.utils.UUIDUtils;
+import pers.zjc.sams.vo.StuCourseVo;
 
 import java.util.List;
 
@@ -27,7 +29,11 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public boolean addStuCourse(Integer stuId, Integer courseId) {
         String id = UUIDUtils.getUUID();
-        return stuCourseMapper.insert(id, stuId, courseId) > 0;
+        StuCourse stuCourse = new StuCourse();
+        stuCourse.setId(id);
+        stuCourse.setCourseId(courseId);
+        stuCourse.setStuId(stuId);
+        return stuCourseMapper.insert(stuCourse) > 0;
     }
 
     @Override
@@ -43,5 +49,10 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public boolean delete(Course course) {
         return courseMapper.deleteByPrimaryKey(course.getId()) > 0;
+    }
+
+    @Override
+    public List<StuCourseVo> getStuCourses(Integer stuId) {
+        return stuCourseMapper.selectByStuId(stuId);
     }
 }

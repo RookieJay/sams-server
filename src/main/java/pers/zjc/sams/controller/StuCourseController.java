@@ -5,29 +5,38 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import pers.zjc.sams.po.Course;
 import pers.zjc.sams.service.CourseService;
 import pers.zjc.sams.utils.Const;
 import pers.zjc.sams.utils.Result;
+import pers.zjc.sams.vo.StuCourseVo;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
-@RequestMapping(value = "api/mpbile/stuCourse", method = RequestMethod.POST)
+@RequestMapping(value = "api/mobile/stuCourse", method = RequestMethod.POST)
 public class StuCourseController {
 
     @Autowired
     private CourseService courseService;
 
     @ResponseBody
-    @RequestMapping(value = "/add")
-    public Result addStuCourse(Integer stuId, Integer courseId) {
+    @RequestMapping(value = "/common")
+    public Result getStuCourses(Integer stuId) {
+        if (stuId == null) {
+            return Result.build(Const.HttpStatusCode.HttpStatus_403, "学号不能为空");
+        }
         try {
-            if (courseService.addStuCourse(stuId, courseId)) {
-                return Result.ok("学生排课成功");
-            }
+            List<StuCourseVo> courses = courseService.getStuCourses(stuId);
+            Map<String, List<StuCourseVo>> map = new LinkedHashMap<>();
+            map.put("courses", courses);
+            return Result.ok(map);
         } catch (Exception e) {
             e.printStackTrace();
-            return Result.fail_500();
+            return Result.fail_obj_500("courses");
         }
-        return Result.build(Const.HttpStatusCode.HttpStatus_500, "学生排课失败");
     }
 
 }
