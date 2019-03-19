@@ -47,4 +47,8 @@ public interface UserService {
     boolean modifyPwd(User user);
 
     boolean updateUser(User user);
+
+    List<Teacher> getAllTeachers();
+
+    List<Student> getAllStudents();
 }

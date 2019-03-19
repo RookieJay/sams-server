@@ -237,4 +237,32 @@ public class UserController extends BaseController{
     }
 
 
+    @RequestMapping(value = "/students/all")
+    @ResponseBody
+    public Result getStudentsAll() {
+        try {
+            List<Student> students = userService.getAllStudents();
+            Map<String, Object> map = new LinkedHashMap<>();
+            map.put("students", students);
+            return Result.ok(map);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_500("students");
+        }
+    }
+
+    @RequestMapping(value = "/teachers/all")
+    @ResponseBody
+    public Result getTeachersAll() {
+        try {
+            List<Teacher> teachers = userService.getAllTeachers();
+            Map<String, Object> map = new LinkedHashMap<>();
+            map.put("teachers", teachers);
+            return Result.ok(map);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_500("teachers");
+        }
+    }
+
 }
