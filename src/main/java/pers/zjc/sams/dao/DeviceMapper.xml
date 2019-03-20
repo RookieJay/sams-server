@@ -35,6 +35,6 @@
     select * from device where stu_id = #{stuId}
   </select>
   <select id="selectAll" resultMap="DeviceResultMap">
-    select * from device
+    select *, s.s_name from device d, student s where d.stu_id = s.stu_id;
   </select>
 </mapper>

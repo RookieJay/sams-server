@@ -60,5 +60,7 @@
     </if>
    </where>
   </update>
-
+<select id="selectAll" resultMap="StudentResultMap">
+  select * from student
+</select>
 </mapper>

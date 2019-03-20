@@ -3,6 +3,8 @@ package pers.zjc.sams.dao;
 import org.apache.ibatis.annotations.Param;
 import pers.zjc.sams.po.Student;
 
+import java.util.List;
+
 public interface StudentMapper {
 
     int deleteByPrimaryKey(Integer stuId);
@@ -18,4 +20,6 @@ public interface StudentMapper {
     int updateByPrimaryKey(Student record);
 
     Student selectMaxIdStu();
+
+    List<Student> selectAll();
 }

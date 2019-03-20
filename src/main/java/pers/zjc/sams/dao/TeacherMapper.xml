@@ -47,4 +47,7 @@
         </if>
       </where>
   </update>
+  <select id="selectAll" resultMap="TeacherResultMap">
+    select * from teacher
+  </select>
 </mapper>

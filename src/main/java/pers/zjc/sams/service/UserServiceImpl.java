@@ -222,4 +222,14 @@ public class UserServiceImpl implements UserService {
     public boolean updateUser(User user) {
         return userMapper.updateUser(user);
     }
+
+    @Override
+    public List<Student> getAllStudents() {
+        return studentMapper.selectAll();
+    }
+
+    @Override
+    public List<Teacher> getAllTeachers() {
+        return teacherMapper.selectAll();
+    }
 }
