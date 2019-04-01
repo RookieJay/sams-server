@@ -29,17 +29,7 @@
         </where>
     </select>
     <update id="revoke" parameterType="String">
-        update `leave`
-          <set>
-              <if test="id != null and id != ''">
-                  status = 1
-              </if>
-          </set>
-          <where>
-              <if test="id != null and id != ''">
-                  id = #{id}
-              </if>
-          </where>
+        update `leave` set status = 1 where id = #{id}
     </update>
     <select id="commonSelect" resultMap="LeaveResultMap">
         select a.*, b.name AS "courseName", c.s_name as "stuName" from `leave` a, course b, student c
@@ -56,4 +46,10 @@
             </if>
         </where>
     </select>
+    <update id="pass" parameterType="Integer">
+        update `leave` set status = 2 where id = #{id}
+    </update>
+    <update id="refuse" parameterType="Integer">
+        update `leave` set status = 3 where id = #{id}
+    </update>
 </mapper>

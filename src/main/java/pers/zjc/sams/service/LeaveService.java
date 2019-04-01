@@ -14,4 +14,8 @@ public interface LeaveService {
     List<LeaveVo> getAllLeaves();
 
     boolean revoke(String id);
+
+    boolean pass(String id);
+
+    boolean refuse(String id);
 }

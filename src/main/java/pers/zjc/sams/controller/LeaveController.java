@@ -2,10 +2,7 @@ package pers.zjc.sams.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import pers.zjc.sams.po.Leave;
 import pers.zjc.sams.service.LeaveService;
 import pers.zjc.sams.utils.Const;
@@ -27,7 +24,7 @@ public class LeaveController {
     LeaveService leaveService;
 
     /**
-     * 请假 ()
+     * 请假
      * */
     @ResponseBody
     @RequestMapping(value = "/askForLeave", method = RequestMethod.POST)
@@ -61,8 +58,6 @@ public class LeaveController {
             return Result.build(Const.HttpStatusCode.HttpStatus_500, "撤销请假失败", new Object());
         }
     }
-
-
 
     /**
      * 所有请假信息查询
@@ -110,7 +105,30 @@ public class LeaveController {
         }
     }
 
+    /**
+     * 通过请假申请
+     */
+    @ResponseBody
+    @RequestMapping(value = "/pass")
+    public Result pass(@RequestBody Leave leave) {
+        if (leaveService.pass(leave.getId())) {
+            return Result.ok();
+        } else {
+            return Result.fail_500();
+        }
+    }
 
-
+    /**
+     * 拒绝请假申请
+     */
+    @ResponseBody
+    @RequestMapping(value = "/refuse")
+    public Result refuse(@RequestBody Leave leave) {
+        if (leaveService.refuse(leave.getId())) {
+            return Result.ok();
+        } else {
+            return Result.fail_500();
+        }
+    }
 
 }

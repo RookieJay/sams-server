@@ -62,4 +62,14 @@ public class LeaveServiceImpl implements LeaveService {
         }
         return false;
     }
+
+    @Override
+    public boolean pass(String id) {
+        return leaveMapper.pass(id) > 0;
+    }
+
+    @Override
+    public boolean refuse(String id) {
+        return leaveMapper.refuse(id) > 0;
+    }
 }

@@ -24,7 +24,11 @@ public interface LeaveMapper {
 
     List<LeaveVo> selectAll();
 
-    int revoke(String id);
+    int revoke(@Param("id") String id);
 
     List<LeaveVo> commonSelect(Leave record);
+
+    int pass(@Param("id") String id);
+
+    int refuse(@Param("id") String id);
 }
