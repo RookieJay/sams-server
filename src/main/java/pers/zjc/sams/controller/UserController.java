@@ -236,7 +236,9 @@ public class UserController extends BaseController{
         return Result.fail_500();
     }
 
-
+    /**
+     * 查询所有学生
+     */
     @RequestMapping(value = "/students/all")
     @ResponseBody
     public Result getStudentsAll() {
@@ -251,6 +253,9 @@ public class UserController extends BaseController{
         }
     }
 
+    /**
+     * 查询所有教师
+     */
     @RequestMapping(value = "/teachers/all")
     @ResponseBody
     public Result getTeachersAll() {
@@ -261,7 +266,70 @@ public class UserController extends BaseController{
             return Result.ok(map);
         } catch (Exception e) {
             e.printStackTrace();
-            return Result.fail_500("teachers");
+            return Result.fail_array_500("teachers");
+        }
+    }
+
+    /**
+     * 教师用户删除
+     */
+    @RequestMapping(value = "/teachers/cancel")
+    @ResponseBody
+    public Result cancelTeacher(@RequestBody Teacher teacher) {
+        if (teacher.getId() == null) {
+            return Result.fail_500("教师id不能为空");
+        }
+        try {
+            if (userService.cancelTeacher(teacher)) {
+                return Result.ok("教师"+teacher.gettName()+"注销成功");
+            } else {
+                return Result.fail_500();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_500(e.getMessage());
+        }
+    }
+
+    /**
+     * 学生用户注销
+     */
+    @RequestMapping(value = "/students/cancel")
+    @ResponseBody
+    public Result cancelStudent(@RequestBody Student student) {
+        if (student.getStuId() == null) {
+            return Result.fail_500("学生id不能为空");
+        }
+        try {
+            if (userService.cancelStudent(student)) {
+                return Result.ok("学生"+student.getsName()+"注销成功");
+            } else {
+                return Result.fail_500();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_500(e.getMessage());
+        }
+    }
+
+    /**
+     * 学生用户开通
+     */
+    @RequestMapping(value = "/students/activate")
+    @ResponseBody
+    public Result activateStudent(@RequestBody Student student) {
+        if (student.getStuId() == null) {
+            return Result.fail_500("学生id不能为空");
+        }
+        try {
+            if (userService.activateStudent(student)) {
+                return Result.ok("学生"+student.getsName()+"开通成功");
+            } else {
+                return Result.fail_500();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.fail_500(e.getMessage());
         }
     }
 

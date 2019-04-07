@@ -63,4 +63,10 @@
 <select id="selectAll" resultMap="StudentResultMap">
   select * from student
 </select>
+  <update id="cancel" parameterType="pers.zjc.sams.po.Student">
+    update student set status = 1 where stu_id = #{stuId}
+  </update>
+  <update id="activate" parameterType="pers.zjc.sams.po.Student">
+    update student set status = 0 where stu_id = #{stuId}
+  </update>
 </mapper>

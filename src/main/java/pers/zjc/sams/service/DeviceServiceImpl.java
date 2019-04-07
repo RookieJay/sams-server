@@ -44,4 +44,11 @@ public class DeviceServiceImpl implements DeviceService {
     public List<DeviceVo> getAll() {
         return deviceMapper.selectAll();
     }
+
+    @Override
+    public boolean isDeviceCanceled(String deviceId) {
+        Device device = deviceMapper.selectByPrimaryKey(deviceId);
+        return device.getDeviceStatus() == 1;
+    }
+
 }

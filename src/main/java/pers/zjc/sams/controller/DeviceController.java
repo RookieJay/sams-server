@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pers.zjc.sams.po.Device;
 import pers.zjc.sams.service.DeviceService;
+import pers.zjc.sams.utils.Logger;
 import pers.zjc.sams.utils.Result;
 import pers.zjc.sams.vo.DeviceVo;
 
@@ -24,6 +25,7 @@ public class DeviceController {
     @ResponseBody
     @RequestMapping(value = "/update")
     public Result updateDevice(@RequestBody Device device) {
+        Logger.getLogger("updateDevice").info(device.getDeviceId() + " "+ device.getDeviceStatus());
         try {
             if (deviceService.updateDevice(device)) {
                 return Result.ok("设备修改成功");

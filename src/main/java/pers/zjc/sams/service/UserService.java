@@ -51,4 +51,12 @@ public interface UserService {
     List<Teacher> getAllTeachers();
 
     List<Student> getAllStudents();
+
+    boolean cancelTeacher(Teacher teacher);
+
+    boolean cancelStudent(Student student);
+
+    boolean activateStudent(Student student);
+
+    boolean isStuCanceled(Integer id);
 }

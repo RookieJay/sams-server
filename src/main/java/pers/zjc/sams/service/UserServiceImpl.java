@@ -232,4 +232,25 @@ public class UserServiceImpl implements UserService {
     public List<Teacher> getAllTeachers() {
         return teacherMapper.selectAll();
     }
+
+    @Override
+    public boolean cancelTeacher(Teacher teacher) {
+        return teacherMapper.cancel(teacher) > 0;
+    }
+
+    @Override
+    public boolean cancelStudent(Student student) {
+        return studentMapper.cancel(student) > 0;
+    }
+
+    @Override
+    public boolean activateStudent(Student student) {
+        return studentMapper.activate(student) > 0;
+    }
+
+    @Override
+    public boolean isStuCanceled(Integer id) {
+        Student student = studentMapper.selectByPrimaryKey(id);
+        return student.getStatus() == 1;
+    }
 }

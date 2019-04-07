@@ -16,4 +16,6 @@ public interface DeviceService {
     String getDeviceId(Integer stuId);
 
     List<DeviceVo> getAll();
+
+    boolean isDeviceCanceled(String deviceId);
 }

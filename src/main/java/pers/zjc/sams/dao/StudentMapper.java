@@ -22,4 +22,8 @@ public interface StudentMapper {
     Student selectMaxIdStu();
 
     List<Student> selectAll();
+
+    int cancel(Student student);
+
+    int activate(Student student);
 }

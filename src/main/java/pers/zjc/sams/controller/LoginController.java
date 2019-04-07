@@ -79,6 +79,12 @@ public class LoginController {
                             if (!deviceService.getDeviceId(student.getStuId()).equals(user.getDeviceId())) {
                                 return Result.build(Const.HttpStatusCode.HttpStatus_401, "此设备非登录账号绑定设备", map);
                             }
+                            if (deviceService.isDeviceCanceled(user.getDeviceId())) {
+                                return Result.build(Const.HttpStatusCode.HttpStatus_401, "设备已被注销，请联系管理员", map);
+                            }
+                            if (userService.isStuCanceled(user.getId())) {
+                                return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号已被注销，请联系管理员", map);
+                            }
                             map.put("role", "1");
                             map.put("userId", String.valueOf(localUser.getId()));
                             map.put("token", token);

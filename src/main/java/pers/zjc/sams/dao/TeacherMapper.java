@@ -22,4 +22,6 @@ public interface TeacherMapper {
     Teacher selectMaxIdTeac();
 
     List<Teacher> selectAll();
+
+    int cancel(Teacher teacher);
 }

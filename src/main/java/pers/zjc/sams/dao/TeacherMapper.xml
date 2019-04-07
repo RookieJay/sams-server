@@ -50,4 +50,7 @@
   <select id="selectAll" resultMap="TeacherResultMap">
     select * from teacher
   </select>
+  <delete id="cancel" parameterType="pers.zjc.sams.po.Teacher">
+    delete from teacher where id = #{id}
+  </delete>
 </mapper>
