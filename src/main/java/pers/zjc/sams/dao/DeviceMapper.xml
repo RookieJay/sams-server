@@ -13,7 +13,7 @@
     insert into device(device_id, stu_id, device_model, device_version) values (#{deviceId}, #{stuId}, #{deviceModel}, #{deviceVersion})
   </insert>
   <update id="updateByPrimaryKey" parameterType="pers.zjc.sams.po.Device">
-    update device set device_status = #{deviceStatus} where device_id = #{deviceId} and stu_id = #{stuId}
+    update device set device_status = #{deviceStatus} where device_id = #{deviceId}
   </update>
   <select id="selectByPrimaryKey" parameterType="String" resultType="pers.zjc.sams.po.Device">
     select *, s.s_name from device d, student s where d.stu_id = s.stu_id and device_id = #{deviceId};

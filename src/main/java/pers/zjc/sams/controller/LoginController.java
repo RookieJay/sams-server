@@ -82,7 +82,7 @@ public class LoginController {
                             if (deviceService.isDeviceCanceled(user.getDeviceId())) {
                                 return Result.build(Const.HttpStatusCode.HttpStatus_401, "设备已被注销，请联系管理员", map);
                             }
-                            if (userService.isStuCanceled(user.getId())) {
+                            if (userService.isStuCanceled(student.getStuId())) {
                                 return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号已被注销，请联系管理员", map);
                             }
                             map.put("role", "1");

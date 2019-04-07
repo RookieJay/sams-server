@@ -55,7 +55,7 @@ public class AttenceController {
      * 查询自定义时间段内的某课程或某学生考勤记录
      */
     @ResponseBody
-    @RequestMapping(value = "list/multiCond")
+    @RequestMapping(value = "/list/multiCond")
     public Result getMultiCondRecord(@RequestBody AttenceRecord record) {
         try {
             Map map = new LinkedHashMap();
@@ -77,11 +77,11 @@ public class AttenceController {
      * 更新考勤记录
      */
     @ResponseBody
-    @RequestMapping(value = "update")
+    @RequestMapping(value = "/update")
     public Result update(@RequestBody AttenceRecord record) {
         try {
             if (attenceService.update(record)) {
-                return Result.ok();
+                return Result.ok("更新考勤状态成功");
             } else {
                 return Result.build(Const.HttpStatusCode.HttpStatus_401, "操作失败");
             }

@@ -55,12 +55,15 @@
     update attence_record
     <set>
       <if test="status != null">
-        and status = #{status}
+        status = #{status}
       </if>
     </set>
     <where>
-      <if test="attenceId != null">
-        attence_id = #{attenceId}
+      <if test="stuId != null">
+        stu_id = #{stuId}
+      </if>
+      <if test="courseId != null">
+        and course_id = #{courseId}
       </if>
     </where>
   </update>
