@@ -18,4 +18,6 @@ public interface CourseService {
     boolean delete(Course course);
 
     List<StuCourseVo> getStuCourses(Integer stuId);
+
+    boolean updateCourse(Course course);
 }

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pers.zjc.sams.po.Course;
 import pers.zjc.sams.service.CourseService;
-import pers.zjc.sams.utils.Const;
 import pers.zjc.sams.utils.Result;
 
 import java.util.LinkedHashMap;
@@ -64,12 +63,35 @@ public class CourseController {
     @ResponseBody
     @RequestMapping(value = "/add")
     public Result addStuCourse(@RequestBody Course course) {
-        if (courseService.addCourse(course)) {
-            return Result.ok("课表添加成功");
+        try {
+            if (courseService.addCourse(course)) {
+                return Result.ok("课表添加成功");
+            }
+            return Result.ok();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return Result.ok();
+        return Result.fail_500();
     }
 
+    /**
+     * 修改课程
+     * @param course
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/update")
+    public Result updateStuCourse(@RequestBody Course course) {
+        try {
+            if (courseService.updateCourse(course)) {
+                return Result.ok("课表修改成功");
+            }
+            return Result.ok();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return Result.fail_500();
+    }
 
     /**
      * 删除课程
@@ -98,6 +120,5 @@ public class CourseController {
         }
         return Result.fail_500("学生排课失败");
     }
-
 
 }

@@ -18,6 +18,26 @@
     insert into course(name, classroom, begin_time, end_time) values (#{name}, #{classroom}, #{beginTime}, #{endTime})
   </insert>
   <delete id="deleteByPrimaryKey" parameterType="pers.zjc.sams.po.Course">
-    delete from course where id = #{id}
+    delete from course where id = #{id};
   </delete>
+  <update id="updateByPrimaryKey" parameterType="pers.zjc.sams.po.Course">
+    update course
+    <set>
+      <if test="name != null">
+        name = #{name},
+      </if>
+      <if test="classroom != null">
+       classroom = #{classroom},
+      </if>
+      <if test="beginTime != null">
+        begin_time = #{beginTime},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime}
+      </if>
+    </set>
+    <where>
+      id = #{id}
+    </where>
+  </update>
 </mapper>

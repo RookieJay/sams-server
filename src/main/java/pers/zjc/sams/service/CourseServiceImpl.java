@@ -55,4 +55,9 @@ public class CourseServiceImpl implements CourseService {
     public List<StuCourseVo> getStuCourses(Integer stuId) {
         return stuCourseMapper.selectByStuId(stuId);
     }
+
+    @Override
+    public boolean updateCourse(Course course) {
+        return courseMapper.updateByPrimaryKey(course) > 0;
+    }
 }
