@@ -2,10 +2,8 @@ package pers.zjc.sams.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import pers.zjc.sams.model.Wrapper;
 import pers.zjc.sams.po.Device;
 import pers.zjc.sams.po.Student;
 import pers.zjc.sams.po.Teacher;
@@ -17,7 +15,6 @@ import pers.zjc.sams.utils.Logger;
 import pers.zjc.sams.utils.Result;
 import pers.zjc.sams.utils.StringUtils;
 
-import java.math.BigDecimal;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -59,7 +56,12 @@ public class UserController extends BaseController{
      */
     @ResponseBody
     @RequestMapping(value = "register")
-    public Result register(@RequestBody User user) {
+    public Result register(@RequestBody Wrapper param) {
+        if (param == null) {
+            return Result.fail_500("参数为空");
+        }
+        User user = param.getUser();
+        Device device = param.getDevice();
         if (user == null || StringUtils.isEmpty(user.getAccount()) || StringUtils.isEmpty(user.getPassword())) {
             return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号或密码不能为空", new Object());
         }
@@ -89,15 +91,13 @@ public class UserController extends BaseController{
                         user.setId(maxIdStu.getStuId() + 1);
                     }
                     if (userService.addStudent(student)) {
-                        Device device = new Device();
                         device.setStuId(student.getStuId());
-                        if (StringUtils.isEmpty(user.getDeviceId())) {
+                        if (StringUtils.isEmpty(device.getDeviceId())) {
                             return Result.fail_500("设备编号不能为空");
                         }
-                        if (deviceService.isDeviceExisted(user.getDeviceId())) {
+                        if (deviceService.isDeviceExisted(device.getDeviceId())) {
                             return Result.fail_500("此设备已经注册，若有疑问，请联系管理员");
                         }
-                        device.setDeviceId(user.getDeviceId());
                         if (deviceService.addStuDevice(device)) {
                             if (userService.updateUser(user)) {
                                 return Result.ok("学生添加成功且设备绑定成功");
@@ -332,5 +332,30 @@ public class UserController extends BaseController{
             return Result.fail_500(e.getMessage());
         }
     }
+
+//    class Wrapper {
+//        private User user;
+//        private Device device;
+//
+//        public Wrapper() {
+//        }
+//
+//        public User getUser() {
+//            return user;
+//        }
+//
+//        public void setUser(User user) {
+//            this.user = user;
+//        }
+//
+//        public Device getDevice() {
+//            return device;
+//        }
+//
+//        public void setDevice(Device device) {
+//            this.device = device;
+//        }
+//    }
+
 
 }

@@ -46,10 +46,10 @@
             </if>
         </where>
     </select>
-    <update id="pass" parameterType="Integer">
+    <update id="pass" parameterType="String">
         update `leave` set status = 2 where id = #{id}
     </update>
-    <update id="refuse" parameterType="Integer">
+    <update id="refuse" parameterType="String">
         update `leave` set status = 3 where id = #{id}
     </update>
 </mapper>

@@ -34,5 +34,6 @@ public class CustomMapper extends ObjectMapper {
                 jsonGenerator.writeString("");
             }
         });
+
     }
 }

@@ -112,7 +112,7 @@ public class LeaveController {
     @RequestMapping(value = "/pass")
     public Result pass(@RequestBody Leave leave) {
         if (leaveService.pass(leave.getId())) {
-            return Result.ok();
+            return Result.ok("已通过请假");
         } else {
             return Result.fail_500();
         }
@@ -125,7 +125,7 @@ public class LeaveController {
     @RequestMapping(value = "/refuse")
     public Result refuse(@RequestBody Leave leave) {
         if (leaveService.refuse(leave.getId())) {
-            return Result.ok();
+            return Result.ok("已拒绝申请");
         } else {
             return Result.fail_500();
         }

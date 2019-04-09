@@ -21,6 +21,9 @@ public class User implements Serializable {
 
     private String deviceId;
 
+    public User() {
+    }
+
     public Integer getId() {
         return id;
     }

@@ -80,10 +80,10 @@ public class LoginController {
                                 return Result.build(Const.HttpStatusCode.HttpStatus_401, "此设备非登录账号绑定设备", map);
                             }
                             if (deviceService.isDeviceCanceled(user.getDeviceId())) {
-                                return Result.build(Const.HttpStatusCode.HttpStatus_401, "设备已被注销，请联系管理员", map);
+                                return Result.build(Const.HttpStatusCode.HttpStatus_401, "设备未开通，请联系管理员", map);
                             }
                             if (userService.isStuCanceled(student.getStuId())) {
-                                return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号已被注销，请联系管理员", map);
+                                return Result.build(Const.HttpStatusCode.HttpStatus_401, "账号未开通，请联系管理员", map);
                             }
                             map.put("role", "1");
                             map.put("userId", String.valueOf(localUser.getId()));
